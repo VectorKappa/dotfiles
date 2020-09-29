@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Make vim the default editor.
+export EDITOR='vim';
+
+# Enable persistent REPL history for `node`.
+export NODE_REPL_HISTORY=~/.node_history;
+# Allow 32³ entries; the default is 1000.
+export NODE_REPL_HISTORY_SIZE='32768';
+# Use sloppy mode by default, matching web browsers.
+export NODE_REPL_MODE='sloppy';
+
+# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
+export PYTHONIOENCODING='UTF-8';
+
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
+
+# Less settings
+if which less > /dev/null 2>&1;then
+	export PAGER="less"
+	export LESS="-R"
+	# nicer highlighting
+	if which src-hilite-lesspipe.sh > /dev/null 2>&1; then
+		export LESSOPEN="| src-hilite-lesspipe.sh %s"
+	fi
+
+	# Don’t clear the screen after quitting a manual page.
+	export MANPAGER='less -X';
+fi
