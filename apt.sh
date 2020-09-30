@@ -20,28 +20,36 @@ apt install bash \
     nmap \
     openssh \
     openssl \
-    python2 \
     rsync \
     sed \
     tmux \
     vim \
     wget \
-    zip
+    zip \
+    unstable-repo \
+    x11-repo \
+    algernon \
+    busybox \
+    binutils \
+    ffmpeg \
+    dropbear \
+    lynx \
+    make \
+    nano \
+    nodejs \
+    nsnake \
+    nudoku \
+    pngquant \
+    python \
+    ranger \
+    termux-api \
+    termux-auth \
+    vitetris \
+    wol \
+    yarn \
+    stow \
+    man
 
-pkg install unstable-repo
-pkg install x11-repo
-pkg install algernon
-pkg list-installed
-pkg install busybox
-pkg install binutils
-pkg install ffmpeg
-pkg install vim
-pkg install dropbear
-pkg install lynx make nano nmap nodejs nsnake nudoku pngquant python ranger termux-api termux-auth vitetris
-pkg install wol wget
-pip install youtube-dl requests
+
 pip install --upgrade pip
-pkg install yarn
-pkg install stow
-pkg install man
-pkg install tmux
+pip install youtube-dl requests
