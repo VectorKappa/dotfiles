@@ -1,0 +1,20 @@
+[Added Associations]
+text/plain=micro.desktop;libreoffice-writer.desktop;
+application/x-shellscript=micro.desktop;atom.desktop;
+image/svg+xml=firefox.desktop;
+text/x-scheme=micro.desktop;
+application/xml=firefox.desktop;
+application/pdf=krita_pdf.desktop;xreader.desktop;libreoffice-draw.desktop;
+image/png=xviewer.desktop;
+image/jpeg=xviewer.desktop;
+audio/mpeg=mpv.desktop;audacity.desktop;
+image/gif=org.qutebrowser.qutebrowser.desktop;
+image/vnd.adobe.photoshop=gimp.desktop;
+audio/x-ms-wma=mpv.desktop;
+audio/x-wav=audacity.desktop;
+text/html=atom.desktop;
+
+[Default Applications]
+text/plain=micro.desktop
+application/pdf=xreader.desktop
+x-scheme-handler/discord-450485984333660181=discord-450485984333660181.desktop
