@@ -40,3 +40,6 @@ apt install bash \
 
 pip install --upgrade pip
 pip install youtube-dl requests
+
+
+#TODO: Make a python install script

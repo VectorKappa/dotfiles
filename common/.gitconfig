@@ -26,15 +26,58 @@
     changed = green
     untracked = cyan
 
+[core]
+    pager = less -R
+[help]
+    autocorrect = 1 #fucking magic!
+
+#Kudos for (copied from):
+#http://git-scm.com/book/en/Customizing-Git-Git-Configuration
+#http://robots.thoughtbot.com/post/4747482956/streamline-your-git-workflow-with-aliases
+#http://oli.jp/2012/git-powerup/#conclusion
+#http://blog.blindgaenger.net/advanced_git_aliases.html
+#https://gist.github.com/robmiller/6018582 (branch-name, publish, unpublish)
+
+[apply]
+	whitespace = nowarn
+
+
+# URL shorthands
+
+[url "git@github.com:"]
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+	insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+	insteadOf = "gist:"
+
+[diff]
+	# Detect copies as well as renames
+	renames = copies
+
+[diff "bin"]
+	# Use `hexdump` to diff binary files
+	textconv = hexdump -v -C
+
+
 [alias]
-    #LAZY VERSIONS OF BASIC COMMANDS
+########LAZY VERSIONS OF BASIC COMMANDS########
 
     co = checkout
     br = branch
     ci = commit
     st = status
 
-    #BETTER VERSIONS OF BASIC COMMANDS
+########BETTER VERSIONS OF BASIC COMMANDS########
 
     purr = pull --rebase
     puff = pull --ff-only
@@ -138,38 +181,8 @@
     #add all, commit with message and push to remote
     apm = "!f() { git add --all && git commit -m \"$@\" && git push; }; f"
 
-[apply]
-    whitespace = nowarn
-[core]
-    pager = less -R
-[help]
-    autocorrect = 1 #fucking magic!
 
-#Kudos for (copied from):
-#http://git-scm.com/book/en/Customizing-Git-Git-Configuration
-#http://robots.thoughtbot.com/post/4747482956/streamline-your-git-workflow-with-aliases
-#http://oli.jp/2012/git-powerup/#conclusion
-#http://blog.blindgaenger.net/advanced_git_aliases.html
-#https://gist.github.com/robmiller/6018582 (branch-name, publish, unpublish)
-[color]
-    ui = auto
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-[color "decorate"]
-    remoteBranch = blue bold
-[color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-[color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
-
-[alias]
+###################! Git Kurwa!####################
     drzewokurwa = log --graph --date=relative \
         --format=format:'%C(auto)%h %C(bold blue)%an%C(auto)%d %C(green)%ad%C(reset)%n%w(80,8,8)%s'
     duzedrzewokurwa= log --graph --date=relative --name-status \
@@ -223,41 +236,6 @@
 
     palisiekurwa = !sh -c 'git add . && git commit -m \"palilo sie\" --no-gpg-sign --no-verify && git push --force && echo \"Ok, now RUN!\"'
     
-[apply]
-	whitespace = nowarn
-
 [user]
 	name = VectorKappa
 	email = piotrpatalong@gmail.com
-
-# URL shorthands
-
-[url "git@github.com:"]
-
-	insteadOf = "gh:"
-	pushInsteadOf = "github:"
-	pushInsteadOf = "git://github.com/"
-
-[url "git://github.com/"]
-
-	insteadOf = "github:"
-
-[url "git@gist.github.com:"]
-
-	insteadOf = "gst:"
-	pushInsteadOf = "gist:"
-	pushInsteadOf = "git://gist.github.com/"
-
-[url "git://gist.github.com/"]
-
-	insteadOf = "gist:"
-
-[diff]
-
-	# Detect copies as well as renames
-	renames = copies
-
-[diff "bin"]
-
-	# Use `hexdump` to diff binary files
-	textconv = hexdump -v -C
