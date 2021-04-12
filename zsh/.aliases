@@ -72,3 +72,5 @@ alias p="ping 1.1.1.1"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+alias cantbebothered='git add -a && git commit -m $(curl -s http://whatthecommit.com/index.txt | uwuify | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat ) && git push'

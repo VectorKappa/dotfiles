@@ -35,11 +35,14 @@ apt install bash \
     yarn \
     stow \
     man \
-    git
+    git \
+    zsh
 
 
 pip install --upgrade pip
 pip install youtube-dl requests
 
+curl https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 #TODO: Make a python install script
+#TODO: Rewrite for arch
