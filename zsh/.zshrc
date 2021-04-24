@@ -1,6 +1,11 @@
 source ~/.zplug/init.zsh
 source ~/.aliases
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt INC_APPEND_HISTORY_TIME
+
 zplug "plugins/git",                    from:oh-my-zsh
 zplug "plugins/colored-man-pages",      from:oh-my-zsh
 zplug "plugins/command-not-found",      from:oh-my-zsh

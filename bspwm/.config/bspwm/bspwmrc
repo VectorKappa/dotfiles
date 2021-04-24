@@ -1,5 +1,5 @@
 #! /bin/sh
-gap=15
+gap=7
 PANEL_HEIGHT=27
 export gap
 export PANEL_HEIGHT
@@ -39,7 +39,7 @@ bspc config split_ratio         0.52
 
 #bspc monitor -d i ii iii iv v vi vii viii ix x
 #bspc monitor -d One Two Three Four Five Six Seven Eight Nine Ten
-#bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d I II III IV V VI VII VIII IX X
 #bspc monitor -d • • • • • • • • • •
 #bspc monitor -d I II III IV V VI
 
@@ -108,7 +108,7 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 
 ##Autostart apps
 #Keybindings daemon
-#sxhkd &
+sxhkd &
 #Source autostartfile. Uncomment this if you use bspwm-git
-#. $HOME/.config/bspwm/autostart
+. $HOME/.config/bspwm/autostart
 

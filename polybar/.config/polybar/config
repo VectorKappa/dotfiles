@@ -390,7 +390,7 @@ menu-2-1-exec = menu-open-0
 
 [module/rofi]
 type = custom/script
-click-left = rofimenu
+click-left = rofi -modi drun,run,window,calc -show drun
 label = M
 
 [settings]
