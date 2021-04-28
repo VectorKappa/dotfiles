@@ -1,4 +1,4 @@
-﻿# bspwm hotkeys
+﻿# bapwm hotkeys
 #
 # Cleanly quit bspwm
 super + shift + q
@@ -75,6 +75,9 @@ alt + ctrl + {a,s,w,d}
 alt + ctrl + {Left,Down,Up,Right}
 	bspc node -p \~{west,south,north,east}
 
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
 # Presel the desktop for splitting in certain direction
 # alt + shift + {a,s,w,d}
 	# bspc node @/ -p \~{west,south,north,east}
@@ -249,7 +252,8 @@ mod1 + @button1
 
 # run applications
 super + space
-	dmenu_recent -fn 'xos4 Terminus:size=15' -i -l 14 -w 600 -y $PANEL_HEIGHT
+	rofi -modi drun,run,window,calc -show drun
+	#dmenu_recent -fn 'xos4 Terminus:size=15' -i -l 14 -w 600 -y $PANEL_HEIGHT
 
 # Triggered by jus tapping super 
 super + shift + space
@@ -277,7 +281,7 @@ super + e
 
 # Use slightly bigger font for ranger
 super + shift + e
-	default-terminal ranger
+	alacritty -e ranger
 
 Print
 	scrot
@@ -286,29 +290,44 @@ Print
 #
 # Media keys
 #
+XF86AudioPrev
+	playerctl previous
+
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioNext
+	playerctl next
 
 XF86AudioRaiseVolume
-	volume up
+	amixer set Master playback 2%+
 
 XF86AudioLowerVolume
-	volume down
+	amixer set Master playback 2%-
 
 XF86AudioMute
-	volume mute
+	amixer set Master toggle
 	
 XF86MonBrightnessDown
- light -U 5 
+	xbacklight -dec 5 
 
 XF86MonBrightnessUp
- light -A 5
- 
+	xbacklight -inc 5
 
 XF86Sleep
 	systemctl suspend
 
+XF86AudioMicMute
+	amixer set Capture toggle
+
+XF86Launch1
+	rofi -modi drun,run,window,calc -show drun
 # make sxhkd reload its configuration files:
 super + shift + Escape
 	pkill -USR1 -x sxhkd
+
+alt + space						#My personal preference
+	rofi -modi drun,run,window,calc -show drun
 
 # In case bspwmrc fails to execute/you wish have plugged in a new monitor
 super + shift + r
@@ -317,9 +336,9 @@ super + shift + r
 alt + ctrl + space
 	$GUI_EDITOR ~/.config/sxhkd/sxhkdrc
 # Toggle compositing
-super + ctrl + space
-	{pkill compton ,\
-	compton -b }
+super + ctrl + alt + space
+	{pkill picom ,\
+	picom -b }
 
 # Remove receptacles
 super + BackSpace

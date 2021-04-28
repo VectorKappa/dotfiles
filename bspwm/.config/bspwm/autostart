@@ -1,14 +1,10 @@
-##run_once is a script in /usr/bin that prevents running script if it is running already
-##
-
 ## Load appearance settings
 xsetroot -cursor_name left_ptr &
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
 xrdb merge .Xresources &
-## Wallpaper. Nitrogen just draws wallpaper, 
+## Wallpaper.  
 sh ~/.fehbg &
-## Reduces flicker. Disabling saves resources.
-compton -b &
+picom -b &
 ## enable local fonts in .fonts directory
 xset +fp /usr/share/fonts/local &
 xset +fp /usr/share/fonts/misc &
@@ -26,11 +22,10 @@ eval $(awk -F'=' '/Exec=/ {print $2}' ~/.config/autostart/lxrandr-autostart.desk
 ## Map super key to trigger rofi when used alone
 xcape -e 'Super_L=Super_L|Shift_L|space' &
 ## Polkit agent
-/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+#/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 ## Gnome keyring
 gnome-keyring-daemon &
 thunar --daemon &
-/usr/lib/mate-notification-daemon/mate-notification-daemon &
-
+dunst &
 
 $HOME/.config/polybar/launch.sh

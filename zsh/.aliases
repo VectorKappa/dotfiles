@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# Easier navigation: .., ..., ...., ....., ~ and -
+# Easier navigation: .., ..., ...., .....
 alias ..="cd .."
 alias cd..="cd .."
 alias ...="cd ../.."
@@ -9,7 +9,7 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
 ##* Colours!
-alias ls="command ls --color=auto"
+alias ls="command exa"
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -23,14 +23,16 @@ alias j="jobs"
 alias lessf="less +F"
 
 # List all files colorized in long format
-alias l="ls -l"
-alias ll="ls -lah"
-
+alias l="exa -G --icons"
+alias ll="exa -l"
+alias lg="exa -lG"
+alias lall="exa -laGhF --icons --git"
+alias latree="exa -laGghHT --git --icons"
 # List all files colorized in long format, including dot files
-alias la="ls -la"
+alias la="exa -la"
 
 # List only directories
-alias lsd="ls -l | grep --color=never '^d'"
+alias lsd="exa -laD"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -43,11 +45,9 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 
 # Dice for the undecided
 alias dice='echo $[ 1 + $RANDOM % 6 ]'
-alias yn='[ $[ $RANDOM % 2 ] == 0 ] && echo "Yes" || echo "No"'
 
 # IP addresses
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ifconfig wlan0 | grep 'inet addr' | cut -d ':' -f 2 | cut -d ' ' -f 1"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # Canonical hex dump; some systems have this symlinked
@@ -66,11 +66,15 @@ alias map="xargs -n1"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
-
-# See if connection works
-alias p="ping 1.1.1.1"
-
-# Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
-
+alias p="ping 1.1.1.1"						#See if connection works
+alias path='echo -e ${PATH//:/\\n}'				#Print each PATH entry on a separate line
+alias mkdir='mkdir -pv'						#Intuitive mkdir
+# get top process eating memory
+alias psmem='ps -e -orss=,args= | sort -b -k1 -nr'
+alias psmem10='ps -e -orss=,args= | sort -b -k1 -nr | head -10'
+# get top process eating cpu if not work try excute : export LC_ALL='C'
+alias pscpu='ps -e -o pcpu,cpu,nice,state,cputime,args|sort -k1,1n -nr'
+alias pscpu10='ps -e -o pcpu,cpu,nice,state,cputime,args|sort -k1,1n -nr | head -10'
+# top10 of the history
+alias hist10='print -l ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
 alias cantbebothered='git add -a && git commit -m $(curl -s http://whatthecommit.com/index.txt | uwuify | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat ) && git push'

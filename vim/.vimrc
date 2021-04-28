@@ -28,10 +28,26 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdcommenter'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'valloric/youcompleteme'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'godlygeek/tabular'
+Plug 'ervandew/supertab'
+Plug 'easymotion/vim-easymotion'
+Plug 'elzr/vim-json'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'sheerun/vim-polyglot'
+Plug 'mbbill/undotree'
+Plug 'bronson/vim-trailing-whitespace'
+
+
+
 " Initialize plugin system
 call plug#end()
 
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-
+filetype plugin on
 colorscheme nord
