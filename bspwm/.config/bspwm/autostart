@@ -27,5 +27,9 @@ xcape -e 'Super_L=Super_L|Shift_L|space' &
 gnome-keyring-daemon &
 thunar --daemon &
 dunst &
-
+xss-lock -v i3lock-fancy-dualmonitor &
+dockd --daemon &
+flameshot &
 $HOME/.config/polybar/launch.sh
+
+

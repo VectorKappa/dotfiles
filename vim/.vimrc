@@ -1,3 +1,4 @@
+" Autoinstall vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -9,9 +10,9 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-github-dashboard'
-Plug 'SirVer/ultisnips' 
-Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
+Plug 'honza/vim-snippets'
+Plug 'pearofducks/ansible-vim'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'liuchengxu/vim-which-key'
@@ -30,19 +31,23 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'valloric/youcompleteme'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
-Plug 'ervandew/supertab'
-Plug 'easymotion/vim-easymotion'
-Plug 'elzr/vim-json'
+"Plug 'easymotion/vim-easymotion'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'sheerun/vim-polyglot'
 Plug 'mbbill/undotree'
 Plug 'bronson/vim-trailing-whitespace'
-
-
+" I love you tpope <3
+Plug 'tpope/vim-dadbod'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-obsession'
 
 " Initialize plugin system
 call plug#end()
@@ -51,3 +56,5 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 filetype plugin on
 colorscheme nord
+"Keybinds
+

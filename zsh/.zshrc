@@ -17,8 +17,8 @@ colors
 #                                                          History Settings                                                   #
 ###############################################################################################################################
 HISTFILE=~/.zsh_history		#History file - zsh in name, to differentiate, idk
-HISTSIZE=100001000		#100M history entries - storage space is cheap :)
-SAVEHIST=100000000		#A margin to store some duplicates
+HISTSIZE=1000010000		#1B history entries - storage space is cheap :)
+SAVEHIST=1000000000		#A margin to store some duplicates
 setopt INC_APPEND_HISTORY_TIME	#Black magic, honestly - history nonblockingly gets written to histfile, but separate sessions keep their separate histories
 setopt HIST_VERIFY		#Forces user to confirm banging commands from history (!! pastes previous command to prompt)
 setopt HIST_IGNORE_DUPS		#Ignores duplicates of commands directly before
@@ -42,8 +42,8 @@ fi
 autoload -U select-word-style
 select-word-style bash
 
-#GIANT KEYBOARD CONFIG BLOCK (From oh-my-zsh)
-bindkey '\ew' kill-region                             # [Esc-w] - Kill from the cursor to the mark
+#GIANT KEYBOARD CONFIG BLOCK (From oh-my-zsh)(with further changes)
+bindkey '\ew' kill-region                             # [Esc-w] - Remove chars from the cursor to the mark
 bindkey -s '\el' 'ls\n'                               # [Esc-l] - run command: ls
 bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
 if [[ "${terminfo[kpp]}" != "" ]]; then
@@ -67,7 +67,7 @@ if [[ "${terminfo[kend]}" != "" ]]; then
 	  bindkey "${terminfo[kend]}"  end-of-line            # [End] - Go to end of line
 fi
 
-bindkey ' ' magic-space                               # [Space] - do history expansion
+bindkey ' ' magic-space                               # [Space] - do history expansion - !![space] pastes previous command, ![num][space] jumps to history entry
 
 bindkey '^[[1;5C' forward-word                        # [Ctrl-RightArrow] - move forward one word
 bindkey '^[[1;5D' backward-word                       # [Ctrl-LeftArrow] - move backward one word
@@ -151,7 +151,7 @@ setopt interactivecomments
 
 
 zplug "plugins/emoji",			from:oh-my-zsh
-zplug "plugins/pyenv",			from:oh-my-zsh
+zplug "plugins/virtualenv",	from:oh-my-zsh
 zplug "plugins/pip",			from:oh-my-zsh
 zplug "plugins/nmap",			from:oh-my-zsh
 zplug "plugins/ipfs",			from:oh-my-zsh
@@ -164,19 +164,19 @@ zplug "plugins/cargo",			from:oh-my-zsh
 zplug "plugins/git",                    from:oh-my-zsh
 zplug "plugins/colored-man-pages",      from:oh-my-zsh
 zplug "plugins/command-not-found",      from:oh-my-zsh
-zplug "plugins/web-search",             from:oh-my-zsh
 zplug "plugins/tmux",                   from:oh-my-zsh
 zplug "plugins/urltools",               from:oh-my-zsh
 zplug "plugins/thefuck",                from:oh-my-zsh		#Used interchangably with
 #setopt correct							#<-This option
 # Load completion library for those sweet [tab] squares
 zplug "lib/completion",                 from:oh-my-zsh
-
+zplug "mollifier/anyframe",             from:github
 # Misc. visual tweaks
 zplug "oldratlee/hacker-quotes"
 zplug "modules/prompt",			from:prezto
 zplug "Tarrasch/zsh-autoenv"
 zplug "zpm-zsh/colors"
+zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 # Syntax highlighting for commands, load last
 zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:3
 zplug "zsh-users/zsh-autosuggestions", defer:3
@@ -192,7 +192,7 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-PATH="$PATH:/home/vectorkappa/.cargo/bin"
+PATH="$PATH:/home/vectorkappa/.cargo/bin:/home/vectorkappa/.local/bin"
 
 prompt pure
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

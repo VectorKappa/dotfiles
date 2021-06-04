@@ -24,9 +24,10 @@ alias lessf="less +F"
 
 # List all files colorized in long format
 alias l="exa -G --icons"
-alias ll="exa -l"
+alias ll="exa -l --icons"
 alias lg="exa -lG"
-alias lall="exa -laGhF --icons --git"
+alias lall="exa -lahF --icons --git"
+alias lalg="exa -laGhF --icons --git"
 alias latree="exa -laGghHT --git --icons"
 # List all files colorized in long format, including dot files
 alias la="exa -la"
@@ -78,3 +79,5 @@ alias pscpu10='ps -e -o pcpu,cpu,nice,state,cputime,args|sort -k1,1n -nr | head 
 # top10 of the history
 alias hist10='print -l ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
 alias cantbebothered='git add -a && git commit -m $(curl -s http://whatthecommit.com/index.txt | uwuify | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat ) && git push'
+alias please='sudo'
+alias runhis="anyframe-widget-execute-history"
