@@ -60,6 +60,8 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # Ring the terminal bell
 alias ding="tput bel"
 
+# Backs files up using rsync, not preserving linux perms (for external drives)
+alias backup="rsync -vrltD --progress"
 # Intuitive map function
 # For example, to list all directories that contain a certain file:
 # find . -name .gitattributes | map dirname

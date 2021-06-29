@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 ###############################################################################################################################
 #                                                             Initialization                                                  #
 ###############################################################################################################################
@@ -172,7 +179,6 @@ zplug "plugins/thefuck",                from:oh-my-zsh		#Used interchangably wit
 zplug "lib/completion",                 from:oh-my-zsh
 zplug "mollifier/anyframe",             from:github
 # Misc. visual tweaks
-zplug "oldratlee/hacker-quotes"
 zplug "modules/prompt",			from:prezto
 zplug "Tarrasch/zsh-autoenv"
 zplug "zpm-zsh/colors"
@@ -181,6 +187,7 @@ zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:3
 zplug "zsh-users/zsh-autosuggestions", defer:3
 zplug "RobSis/zsh-completion-generator", defer:3
+zplug "romkatv/powerlevel10k", as:theme, depth:1
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -192,7 +199,9 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-PATH="$PATH:/home/vectorkappa/.cargo/bin:/home/vectorkappa/.local/bin"
-
-prompt pure
+# prompt pure
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+(( ! ${+functions[p10k]} )) || p10k finalize
