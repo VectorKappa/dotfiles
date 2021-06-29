@@ -150,7 +150,9 @@ bell:
   # Visual bell animation color.
   color: '#4C566A'
 
-  command: beep
+  command:
+    program: play
+    args: ["/home/vectorkappa/Music/beeps/wav/honk-sound.wav"]
 hints:
     # URL launcher
     #
