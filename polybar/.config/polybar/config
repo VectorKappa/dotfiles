@@ -49,18 +49,18 @@ padding-left = 0
 padding-right = 2
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = fixed:pixelsize=10;1
+font-0 = SauceCodePro Nerd Font Mono:size=10
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = rofi bspwm
 modules-center = mpd title
-modules-right = xbacklight pulseaudio memory cpu wlan eth battery temperature date powermenu
+modules-right = xkeyboard xbacklight pulseaudio memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
-tray-padding = 2
+tray-padding = 10
 ;tray-background = #0063ff
 
 wm-restack = bspwm
@@ -81,11 +81,11 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
-label-layout = %layout%
+label-layout =
 label-layout-underline = ${colors.secondary}
 
 label-indicator-padding = 2
@@ -106,29 +106,29 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
+label-focused = %icon%%name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
-label-occupied = %index%
-label-occupied-padding = 2
+label-occupied = %name%
+label-occupied-padding = 1
 
-label-urgent = %index%!
+label-urgent = %name%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
-label-empty = %index%
+label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
 ; Separator in between workspaces
 ; label-separator = |
-ws-icon-0 = Web;
-ws-icon-1 = Terminals;♛
-ws-icon-2 = Info;♜
-ws-icon-3 = Code;♝
-ws-icon-7 = Communication;♞
+ws-icon-0 = Web;爵
+ws-icon-1 = Terminals;
+ws-icon-2 = Info;
+ws-icon-3 = Code;
+ws-icon-7 = Communication;
 ; ws-icon-default =
 
 [module/mpd]
@@ -148,7 +148,7 @@ label-song-ellipsis = true
 type = internal/xbacklight
 
 format = <label> <bar>
-label = BL
+label = 盛
 
 bar-width = 10
 bar-indicator = |
@@ -169,7 +169,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %percentage:2%%
@@ -193,7 +193,7 @@ label-empty =
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
@@ -213,20 +213,20 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = ⠁
+ramp-signal-1 = ⠃
+ramp-signal-2 = ⠇
+ramp-signal-3 = ⡇
+ramp-signal-4 = ⣿
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp4s0f2
+interface = enp0s25
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
@@ -256,7 +256,7 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume = 墳 %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
@@ -283,10 +283,10 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+label-volume = 墳
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = "ﱝ "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
@@ -316,21 +316,29 @@ full-at = 98
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
-format-discharging = <animation-discharging> <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
@@ -343,7 +351,7 @@ animation-discharging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 80
 
 format = <ramp> <label>
 format-underline = #f50a4d
@@ -351,12 +359,13 @@ format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
-label-warn = %temperature-c%
+label-warn =  %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
@@ -366,7 +375,7 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open = ⏻
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
@@ -391,7 +400,7 @@ menu-2-1-exec = menu-open-0
 [module/rofi]
 type = custom/script
 click-left = rofi -modi drun,run,window,calc -show drun
-label = M
+label = 
 
 [settings]
 screenchange-reload = true

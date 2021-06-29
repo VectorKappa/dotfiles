@@ -4,6 +4,7 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
 xrdb merge .Xresources &
 ## Wallpaper.  
 sh ~/.fehbg &
+## Composition manager
 picom -b &
 ## enable local fonts in .fonts directory
 xset +fp /usr/share/fonts/local &
@@ -21,15 +22,20 @@ xset -dpms &
 eval $(awk -F'=' '/Exec=/ {print $2}' ~/.config/autostart/lxrandr-autostart.desktop) &
 ## Map super key to trigger rofi when used alone
 xcape -e 'Super_L=Super_L|Shift_L|space' &
+
 ## Polkit agent
-#/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+polkit-dumb-agent &
+
 ## Gnome keyring
 gnome-keyring-daemon &
-thunar --daemon &
+
 dunst &
 xss-lock -v i3lock-fancy-dualmonitor &
 dockd --daemon &
 flameshot &
-$HOME/.config/polybar/launch.sh
+run_keybase -a &
+telegram-desktop -startintray &
+sleep 3 &
+$HOME/.config/polybar/launch.sh &
 
 
