@@ -265,11 +265,9 @@ super + space
 	#dmenu_recent -fn 'xos4 Terminus:size=15' -i -l 14 -w 600 -y $PANEL_HEIGHT
 
 # Triggered by jus tapping super
-super + shift + space
-	#xlunch --
-	gnome-pie -o 460
-
-#super + p
+super + shift + @space
+	xlunch --
+	#gnome-pie -o 460 --display=:0
 #	dmenu_recent -h $PANEL_HEIGHT -fn 'xos4 Terminus:size=15' -i
 
 super + shift + Return
@@ -294,8 +292,8 @@ super + shift + e
 	alacritty -e ranger
 
 Print
-	scrot
-
+#	scrot
+  flameshot gui
 
 #
 # Media keys
@@ -348,11 +346,11 @@ super + shift + Escape
 alt + space
 	rofi -modi drun,run,window,calc -show drun
 
-super + shift + s
-	flameshot gui
-
+super + shift + @S
+	#flameshot gui
+  scrot
 # In case bspwmrc fails to execute/you wish have plugged in a new monitor
-super + shift + r
+super + shift + R
 	bspwmrc
 #edit this file
 alt + ctrl + space

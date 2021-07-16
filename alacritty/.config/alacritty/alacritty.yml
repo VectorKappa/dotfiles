@@ -151,7 +151,7 @@ bell:
   color: '#4C566A'
 
   command:
-    program: play
+    program: aplay
     args: ["/home/vectorkappa/Music/beeps/wav/honk-sound.wav"]
 hints:
     # URL launcher

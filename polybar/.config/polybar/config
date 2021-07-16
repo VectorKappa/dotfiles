@@ -51,9 +51,10 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = SauceCodePro Nerd Font Mono:size=10
+font-0 = "SauceCodePro Nerd Font Mono:size=10"
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
+font-3 = "SauceCodePro Nerd Font Mono:size=16;4"
 
 modules-left = rofi bspwm
 modules-center = mpd title
@@ -181,6 +182,8 @@ type = internal/xwindow
 format = <label>
 format-foreground = ${colors.foreground-alt}
 format-padding = 0
+
+click-left = bspc node -c
 
 label = %title%
 label-maxlen = 40
@@ -398,10 +401,14 @@ menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
 [module/rofi]
-type = custom/script
-click-left = rofi -modi drun,run,window,calc -show drun
-label = 
-
+type = custom/text
+click-left = xlunch --bc 2e3440aa >> /tmp/xlunchlog.log 2>&1
+;click-left = rofi -modi drun,run,window,calc -show drun
+content = 
+content-padding = 1
+content-background = #BF616A
+content-foreground = #2E3440
+content-font = 4
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
