@@ -17,7 +17,7 @@ yay -S \
 	alsa-utils \
 	thefuck \
 	nerd-fonts-complete \
-	polkit-dumb-agent-git \
+	mate-polkit \
 	kvantum-qt5 \
 	lxappearance \
 	nordic-darker-theme\
@@ -77,5 +77,5 @@ yay -S \
 	dnsmasq \
 	etckeeper \
 	flameshot \
-  jshon
-
+  jshon \
+	bc
