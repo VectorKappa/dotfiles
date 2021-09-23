@@ -55,7 +55,6 @@ font-0 = "SauceCodePro Nerd Font Mono:size=10"
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = "SauceCodePro Nerd Font Mono:size=16;4"
-font-4 = "SauceCodePro Nerd Font Mono:size=13;2"
 
 modules-left = rofi bspwm
 modules-center = mpd title
@@ -217,11 +216,11 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = ⣀
-ramp-signal-1 = ⣤
-ramp-signal-2 = ⣶
-ramp-signal-3 = ⣿
-ramp-signal-4 = █ 
+ramp-signal-0 = ⠁
+ramp-signal-1 = ⠃
+ramp-signal-2 = ⠇
+ramp-signal-3 = ⡇
+ramp-signal-4 = ⣿
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -250,7 +249,7 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
@@ -323,11 +322,10 @@ format-charging-underline = #ffb52a
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-font = 5
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
-ramp-font = 5
+
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
@@ -340,7 +338,6 @@ ramp-capacity-8 = 
 ramp-capacity-9 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-font = 5
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
@@ -368,7 +365,6 @@ label = %temperature-c%
 label-warn =  %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-font = 5
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
@@ -406,7 +402,7 @@ menu-2-1-exec = menu-open-0
 
 [module/rofi]
 type = custom/text
-click-left = xlunch --input /etc/xlunch/entries.dsv --bc 2e3440aa >> /tmp/xlunchlog.log 2>&1
+click-left = xlunch --bc 2e3440aa >> /tmp/xlunchlog.log 2>&1
 ;click-left = rofi -modi drun,run,window,calc -show drun
 content = 
 content-padding = 1

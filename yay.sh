@@ -64,18 +64,6 @@ yay -S \
 	gnome-keyring \
 	i3lock-fancy-dualmonitors-git \
 	lxrandr \
-	feh \
-	nano \
-	nemo \
-	nemo-fileroller \
-	nemo-preview \
-	nemo-image-converter \
-	nemo-seahorse \
-	nemo-terminal \
-	fprint \
-	cups \
-	dnsmasq \
-	etckeeper \
-	flameshot \
-  jshon
+	feh
+
 
