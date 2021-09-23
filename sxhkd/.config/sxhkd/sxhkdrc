@@ -170,6 +170,8 @@ super + ctrl + {a,s,w,d}
 super + ctrl + {Left,Down,Up,Right}
 	bspwm_resize.sh {west,south,north,east}
 
+super + shift + r
+	bspwm_rename_desktop
 #
 # Layout manipulation/desktop level controls
 # ______________
@@ -341,7 +343,7 @@ XF86Launch1
 	rofi -modi drun,run,window,calc -show drun
 # make sxhkd reload its configuration files:
 super + shift + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd && sxhkd
 
 alt + space
 	rofi -modi drun,run,window,calc -show drun
@@ -358,7 +360,7 @@ alt + ctrl + space
 # Toggle compositing
 super + ctrl + alt + space
 	{pkill picom ,\
-	picom -b }
+	picom -b --experimental-backends }
 
 # Remove receptacles
 super + BackSpace
