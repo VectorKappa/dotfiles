@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "400x10-600+35"
+    geometry = "400x10-5+35" #-600+35
 
     # Turn on the progess bar
     progress_bar = true
@@ -327,7 +327,7 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#22222200"
+    background = "#222222ff"
     foreground = "#eceff4"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable

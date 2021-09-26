@@ -6,4 +6,7 @@ yay -S \
   blender \
   discord-arch-electron \
   multimc-bin \
-  spotify 
+  spotify \
+  davinci-resolve \
+  keybase-bin \
+  teamviewer

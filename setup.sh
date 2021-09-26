@@ -77,5 +77,6 @@ yay -S \
   ethtool \
   exa \
   pwgen \
-  virt-manager2 \
-  
+  virt-manager \
+  lsw \
+  xdo
