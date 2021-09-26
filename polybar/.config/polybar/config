@@ -411,7 +411,7 @@ menu-2-1-exec = menu-open-0
 
 [module/rofi]
 type = custom/text
-click-left = xlunch --input /etc/xlunch/entries.dsv --bc 2e3440aa >> /tmp/xlunchlog.log 2>&1
+click-left = rofi -modi drun,run,window,calc -show drun
 ;click-left = rofi -modi drun,run,window,calc -show drun
 content = 
 content-padding = 1

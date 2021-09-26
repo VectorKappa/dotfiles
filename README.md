@@ -1,3 +1,8 @@
-# This is my personal collection of dotfiles, for usage on termux and arch
+# This is my dotfiles collection
 
-## Use GNU Stow for deploying
+## Setup
+- install yay
+- run ./setup.sh for initial installation
+- use stow for deploying
+- run ./copy-bin.sh to copy scripts to /usr/bin
+- run ./apps.sh to install basic apps

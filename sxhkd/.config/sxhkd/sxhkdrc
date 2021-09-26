@@ -324,7 +324,7 @@ XF86MonBrightnessDown
 XF86MonBrightnessUp
 	xbacklight -inc 5
 
-XF86ScreenSaver
+super + l
 	loginctl lock-session
 
 XF86Sleep
