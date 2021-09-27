@@ -109,41 +109,23 @@ alt + Return
 	bspc node -n @/
 
 # go (Shift=move) to desktop (and focus the monitor that the desktop is located on. Bspwm style)
-super + {_,shift + }{1-9,0}
+super + {_,shift + }{1-9,10}
     bspc {desktop -f,node -d} ^{1-9,10}
 
-# super + {_,shift + }{F1-F10}
-# 	  bspc {desktop -f,node -d} '{a-i,j}'
-#! Hell, but works if you still don't have enough just use another modifier for the one above or this one 
-super + {_,shift + }F1
-	  bspc {desktop -f,node -d} XI
+super + {_,shift + }{F1}
+    bspc {desktop -f,node -d} VI
 
-super + {_,shift + }F2
-	  bspc {desktop -f,node -d} XII
+super + {_,shift + }{F2}
+    bspc {desktop -f,node -d} VII
 
-super + {_,shift + }F3
-	  bspc {desktop -f,node -d} XIII
+super + {_,shift + }{F3}
+    bspc {desktop -f,node -d} VIII
 
-super + {_,shift + }F4
-	  bspc {desktop -f,node -d} XIV
+super + {_,shift + }{F4}
+    bspc {desktop -f,node -d} IX
 
-super + {_,shift + }F5
-	  bspc {desktop -f,node -d} XV
-
-super + {_,shift + }F6
-	  bspc {desktop -f,node -d} XVI
-  
-super + {_,shift + }F7
-	  bspc {desktop -f,node -d} XVII
-
-super + {_,shift + }F8
-	  bspc {desktop -f,node -d} XVIII
-
-super + {_,shift + }F9
-	  bspc {desktop -f,node -d} XIX
-
-super + {_,shift + }F10
-	  bspc {desktop -f,node -d} XX
+super + {_,shift + }{F5}
+    bspc {desktop -f,node -d} X
 
 ## Alternative: i3 style behavior (focus nth, desktop of the focused monitor)
 #super + {1-9,0}
