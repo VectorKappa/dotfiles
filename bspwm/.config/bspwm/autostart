@@ -52,7 +52,7 @@ xss-lock -v i3lock-fancy-dualmonitor &
 flameshot &
 
 ## Autostart
-run_keybase -a &
+# run_keybase -a &
 
 ## Telegram daemon
 telegram-desktop -startintray &
