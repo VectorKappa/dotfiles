@@ -210,15 +210,13 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = %{T5} %{T-}
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %percentage:2%%
 
 [module/title]
 type = internal/xwindow
-; Available tags:
-;   <label> (default)
 format = <label>
 format-foreground = ${colors.foreground-alt}
 format-padding = 0
@@ -228,9 +226,6 @@ click-left = bspc node -c
 label = %title%
 label-maxlen = 40
 
-; Used instead of label when there is no window title
-; Available tokens:
-;   None
 label-empty = 
 
 [module/memory]
@@ -306,36 +301,8 @@ format-volume = <label-volume> <bar-volume>
 label-volume = %{T5}墳%{T-} %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = ﱝ muted
+label-muted =%{T5}ﱝ%{T-} muted
 label-muted-foreground = #666
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
-[module/alsa]
-type = internal/alsa
-
-format-volume = <label-volume> <bar-volume>
-label-volume = 墳
-label-volume-foreground = ${root.foreground}
-
-format-muted-prefix = "ﱝ "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -418,10 +385,9 @@ type = custom/menu
 expand-right = true
 
 format-spacing = 1
-
-label-open = ⏻
+label-open = %{T4}⏻%{T-}
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close = %{T4}ﰸ%{T-} cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
