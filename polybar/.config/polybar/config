@@ -58,7 +58,7 @@ font-3 = "SauceCodePro Nerd Font Mono:size=16;4"
 font-4 = "SauceCodePro Nerd Font Mono:size=13;2"
 
 modules-left = rofi bspwm
-modules-center = mpd title
+modules-center = mpd_icon title
 modules-right = xkeyboard xbacklight pulseaudio memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
@@ -69,8 +69,43 @@ wm-restack = bspwm
 
 ;override-redirect = true
 
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/music]
+monitor = ${env:MONITOR:}
+width = 66.6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666%
+height = 27
+offset-x = 17.66%
+offset-y = 35
+radius = 10
+fixed-center = true
+
+foreground = ${colors.background}
+background = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = "SauceCodePro Nerd Font Mono:size=10"
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = "SauceCodePro Nerd Font Mono:size=16;4"
+font-4 = "SauceCodePro Nerd Font Mono:size=13;2"
+
+modules-center = mpd
+modules-right = pulseaudio
+
+override-redirect = true
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -124,8 +159,11 @@ label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
 ; Separator in between workspaces
-; label-separator = |
+#label-separator = |
 ws-icon-0 = Web;爵
 ws-icon-1 = Terminals;
 ws-icon-2 = Info;
@@ -137,20 +175,21 @@ ws-icon-7 = Communication;
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+click-right = ${polybar music}
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
 
-label-song-maxlen = 25
-label-song-ellipsis = true
+;label-song-maxlen = 25
+;label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
 
 format = <label> <bar>
-label = 盛
+label = %{T5}盛%{T-}
 
 bar-width = 10
 bar-indicator = |
@@ -197,7 +236,7 @@ label-empty =
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = %{T5} %{T-}
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
@@ -207,13 +246,13 @@ type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected = %{A1:alacritty -e nmtui &:}<ramp-signal> <label-connected>%{A}
 format-connected-underline = #9f78e1
 label-connected = %essid%
 ;animation-connected-0 = %local_ip%
 ;animation-connected-1 = %essid%
 ;animation-connected-framerate=1000
-format-disconnected = 睊
+format-disconnected =%{A1:alacritty -e nmtui &:}%{T4} 睊%{A}
 ;format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -228,7 +267,6 @@ ramp-signal-5 = ▆
 ramp-signal-6 = ▇
 ramp-signal-7 = █
 ramp-signal-foreground = ${colors.foreground-alt}
-
 [module/eth]
 type = internal/network
 interface = enp0s25
@@ -255,7 +293,7 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = %{T5}%{T-}
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
@@ -265,10 +303,10 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = 墳 %percentage%%
+label-volume = %{T5}墳%{T-} %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted = ﱝ muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -353,12 +391,6 @@ animation-charging-3 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
-
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
@@ -409,15 +441,23 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
+[module/mpd_icon]
+type = custom/text
+click-left = runpolybaronce
+content = 
+content-font = 4
+;content-underline = #0a6cf5
+
 [module/rofi]
 type = custom/text
 click-left = xlunch --input /etc/xlunch/entries.dsv --bc 2e3440aa >> /tmp/xlunchlog.log 2>&1
-;click-left = rofi -modi drun,run,window,calc -show drun
+
 content = 
 content-padding = 1
 content-background = #BF616A
 content-foreground = #2E3440
 content-font = 4
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor

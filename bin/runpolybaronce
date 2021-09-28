@@ -1,0 +1,2 @@
+#!/bin/zsh
+(pgrep -f "polybar music" >/dev/null && pkill -f "polybar music") || polybar music &
