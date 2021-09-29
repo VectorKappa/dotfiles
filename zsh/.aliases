@@ -82,4 +82,5 @@ alias pscpu10='ps -e -o pcpu,cpu,nice,state,cputime,args|sort -k1,1n -nr | head 
 alias hist10='print -l ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
 alias cantbebothered='git add -a && git commit -m $(curl -s http://whatthecommit.com/index.txt | uwuify | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat ) && git push'
 alias please='sudo'
+alias simon-says='sudo'
 alias runhis="anyframe-widget-execute-history"
