@@ -52,10 +52,11 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = "SauceCodePro Nerd Font Mono:size=10"
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-1 = "Unifont:size=8:antialias=false;0"
+font-2 = "Siji:pixelsize=10;1"
 font-3 = "SauceCodePro Nerd Font Mono:size=16;4"
 font-4 = "SauceCodePro Nerd Font Mono:size=13;2"
+font-5 = "Noto Color Emoji:scale=10;2"
 
 modules-left = rofi bspwm
 modules-center = mpd_icon title
@@ -221,7 +222,7 @@ format = <label>
 format-foreground = ${colors.foreground-alt}
 format-padding = 0
 
-click-left = bspc node -c
+;click-left = bspc node -c
 
 label = %title%
 label-maxlen = 40
@@ -247,7 +248,7 @@ label-connected = %essid%
 ;animation-connected-0 = %local_ip%
 ;animation-connected-1 = %essid%
 ;animation-connected-framerate=1000
-format-disconnected =%{A1:alacritty -e nmtui &:}%{T4} 睊%{A}
+format-disconnected =%{A1:alacritty -e nmtui &:}%{T4}睊%{a}
 ;format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -409,7 +410,7 @@ menu-2-1-exec = menu-open-0
 
 [module/mpd_icon]
 type = custom/text
-click-left = runpolybaronce
+click-left = toggle_run "polybar music"
 content = 
 content-font = 4
 ;content-underline = #0a6cf5
