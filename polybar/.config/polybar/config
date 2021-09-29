@@ -410,7 +410,7 @@ menu-2-1-exec = menu-open-0
 
 [module/mpd_icon]
 type = custom/text
-click-left = toggle_run "polybar music"
+click-left = toggle-run "polybar music"
 content = 
 content-font = 4
 ;content-underline = #0a6cf5
