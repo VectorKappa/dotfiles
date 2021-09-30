@@ -60,10 +60,10 @@ font-5 = "Noto Color Emoji:scale=10;2"
 
 modules-left = rofi bspwm
 modules-center = title
-modules-right = xkeyboard mpd_icon spotify xbacklight pulseaudio memory cpu temperature wlan eth ethpc battery date powermenu
+modules-right = xkeyboard xbacklight pulseaudio spotify memory cpu temperature wlan eth ethpc battery date
 
 tray-position = right
-tray-padding = 10
+tray-padding = 5
 ;tray-background = #0063ff
 
 wm-restack = bspwm
