@@ -27,6 +27,28 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
+; Nord Pallete for colors :)
+; Polar Night
+nord0 = #2E3440
+nord1 = #3B4252
+nord2 = #434C5E
+nord3 = #4C566A
+; Snow Storm
+nord4 = #D8DEE9
+nord5 = #E5E9F0
+nord6 = #ECEFF4
+; Frost
+greeny = #8FBCBB
+frostiest = #88C0D0
+frostier = #81A1C1
+frost = #5E81AC
+; Aurora
+red = #BF616A
+orange = #D08770
+yellow = #EBCB8B
+green = #A3BE8C
+purple = #B48EAD
+
 [bar/example]
 monitor = ${env:MONITOR:}
 width = 100%
@@ -60,7 +82,7 @@ font-5 = "Noto Color Emoji:scale=10;2"
 
 modules-left = rofi bspwm
 modules-center = title
-modules-right = xkeyboard xbacklight pulseaudio spotify memory cpu temperature wlan eth ethpc battery date
+modules-right = temp2 xkeyboard xbacklight pulseaudio spotify uptime load-average memory cpu temperature wlan eth ethpc battery date
 
 tray-position = right
 tray-padding = 5
@@ -226,7 +248,7 @@ type = internal/cpu
 interval = 2
 format-prefix = %{T5} %{T-}
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = #BF616A
 label = %percentage:2%%
 
 [module/title]
@@ -247,7 +269,7 @@ type = internal/memory
 interval = 2
 format-prefix = %{T5} %{T-}
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = ${colors.frostiest}
 label = %percentage_used%%
 
 [module/wlan]
@@ -256,7 +278,7 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = %{A1:alacritty -e nmtui &:}<ramp-signal> <label-connected>%{A}
-format-connected-underline = #9f78e1
+format-connected-underline = ${colors.greeny}
 label-connected = %essid%
 ;animation-connected-0 = %local_ip%
 ;animation-connected-1 = %essid%
@@ -281,7 +303,7 @@ type = internal/network
 interface = enp0s25
 interval = 3.0
 
-format-connected-underline = #55aa55
+format-connected-underline = ${colors.greeny}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected = %{A1:alacritty -e nmtui &:}<label-connected>%{A}
@@ -298,7 +320,7 @@ type = internal/network
 interface = enp0s31f6
 interval = 3.0
 
-format-connected-underline = #55aa55
+format-connected-underline = ${colors.greeny}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected = %{A1:alacritty -e nmtui &:}<label-connected>%{A}
@@ -324,7 +346,7 @@ time-alt = %l:%M:%S %p
 
 format-prefix = %{T5}%{T-}
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = ${colors.frost}
 
 label = %date% %time%
 
@@ -398,7 +420,7 @@ thermal-zone = 2
 warn-temperature = 80
 
 format = <ramp> <label>
-format-underline = #f50a4d
+format-underline = ${colors.red}
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
@@ -412,6 +434,20 @@ ramp-1 = 
 ramp-2 = 
 ramp-3 = 
 ramp-foreground = ${colors.foreground-alt}
+
+[module/temperature-kelvin]
+type = custom/script
+exec = echo $(sensors | grep -oP '(?<=Package id 0:  \+)(.*?)(?=.0°)') + 273 | bc | sed 's/$/K/'
+interval = 1
+
+label = %output%
+
+format-foreground = ${colors.foreground}
+format-background = ${color.background}
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.red}
+
 
 [module/powermenu]
 type = custom/menu
@@ -470,3 +506,31 @@ margin-top = 0
 margin-bottom = 0
 
 ; vim:ft=dosini
+
+[module/uptime]
+type = custom/script
+exec = uptime | grep -oP '(?<=up\s\s)(.*?)(?=,)' | tr :h h: | sed 's/$/m/'
+interval = 1
+
+label = %output%
+
+format-foreground = ${colors.foreground}
+format-background = ${color.background}
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.nord4}
+
+[module/load-average]
+type = custom/script
+exec = uptime | grep -ohe 'load average[s:][: ].*' | awk '{ print $3" "$4" "$5"," }' | sed 's/,//g'
+interval = 100
+
+;HOW TO SET IT MINIMAL 10 CHARACTERS - HIDDEN BEHIND SYSTEM ICONS
+;label = %output%
+label = %output:10%
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.green}
