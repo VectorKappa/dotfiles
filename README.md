@@ -2,5 +2,5 @@
 
 ## Use GNU Stow for deploying
 `stow vim` for vim
-`stow bin -t /user/local/bin` for binaries
-`stow systemd_units -t /usr/lib/systemd/user` for systemd units
+`stow -t /usr/local/bin bin` for binaries
+`stow -t /usr/lib/systemd/user systemd_units` for systemd units
