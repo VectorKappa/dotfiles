@@ -82,7 +82,7 @@ font-5 = "Noto Color Emoji:scale=10;1"
 
 modules-left = rofi bspwm
 modules-center = title
-modules-right = temp2 xkeyboard xbacklight pulseaudio spotify uptime load-average memory cpu temperature wlan eth ethpc battery date
+modules-right = xkeyboard xbacklight pulseaudio spotify uptime memory cpu temperature wlan eth ethpc battery date
 
 tray-position = right
 tray-padding = 5
@@ -352,6 +352,7 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
+click-right = pavucontrol
 
 format-volume = <label-volume> <bar-volume>
 label-volume = %{T5}墳%{T-} %percentage%%
