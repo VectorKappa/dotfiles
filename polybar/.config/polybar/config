@@ -73,12 +73,12 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "SauceCodePro Nerd Font Mono:size=10"
-font-1 = "Unifont:size=8:antialias=false;0"
+font-0 = "SauceCodePro Nerd Font Mono:size=10;1"
+font-1 = "Unifont:size=10:antialias=false;0"
 font-2 = "Siji:pixelsize=10;1"
 font-3 = "SauceCodePro Nerd Font Mono:size=16;4"
-font-4 = "SauceCodePro Nerd Font Mono:size=13;2"
-font-5 = "Noto Color Emoji:scale=10;2"
+font-4 = "SauceCodePro Nerd Font Mono:size=13;3"
+font-5 = "Noto Color Emoji:scale=10;1"
 
 modules-left = rofi bspwm
 modules-center = title
@@ -461,7 +461,7 @@ label-close = %{T4}ﰸ%{T-} cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
-
+click-right = /home/$USER/.config/polybar/launch.sh
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
 menu-0-1 = power off
@@ -479,7 +479,7 @@ menu-2-1-exec = menu-open-0
 
 [module/mpd_icon]
 type = custom/text
-click-left = toggle_run "polybar music"
+click-left = toggle-run "polybar music"
 content = 
 content-font = 4
 ;content-underline = #0a6cf5

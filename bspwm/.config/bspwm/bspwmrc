@@ -85,6 +85,7 @@ bspc rule -a brave-browser desktop=I
 bspc rule -a polybar border=off
 bspc rule -a 9menu border=off manage=off
 bspc rule -a tint2 border=off manage=off
+bspc rule -a dunst border=off manage=off
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
 
@@ -110,5 +111,5 @@ bspc rule -a tint2 border=off manage=off
 #Keybindings daemon
 sxhkd &
 #Source autostartfile. Uncomment this if you use bspwm-git
-. $HOME/.config/bspwm/autostart
+. $HOME/.config/bspwm/autostart > /tmp/bspwm-autostart.log 2>&1
 
