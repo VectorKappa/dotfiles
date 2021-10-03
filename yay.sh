@@ -78,4 +78,7 @@ yay -S \
 	etckeeper \
 	flameshot \
   jshon \
-	bc
+	bc \
+	bat-extras-git \
+	dust \
+	fd
