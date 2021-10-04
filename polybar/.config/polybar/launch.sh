@@ -6,9 +6,6 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# Rescan fonts - just to make sure we have what we need
-fc-cache -fv
-
 # Launch bar
 echo "---" >> /tmp/polybar.log
 
