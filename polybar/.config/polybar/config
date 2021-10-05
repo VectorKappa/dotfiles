@@ -415,6 +415,20 @@ content = 
 content-font = 4
 ;content-underline = #0a6cf5
 
+[module/uptime]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/uptime.sh
+; Pretty version
+; exec = uptime -p 
+interval = 60
+
+label = %output%
+
+format-foreground = ${colors.foreground}
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #88C0D0
+
 [module/rofi]
 type = custom/text
 click-left = xlunch --input /etc/xlunch/entries.dsv --bc 2e3440aa >> /tmp/xlunchlog.log 2>&1
