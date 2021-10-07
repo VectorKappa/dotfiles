@@ -17,15 +17,13 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #2E3440
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #D8DEE9
-foreground-alt = #4C566A
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+background = ${xrdb:background:#2E3440}
+background-alt = ${xrdb:color0:#3B4252}
+foreground = ${xrdb:foreground:#D8DEE9}
+foreground-alt = ${xrdb:color8:#4C566A}
+primary = ${xrdb:color6:#88C0D0}
+secondary = ${xrdb:color4:#81A1C1}
+alert = ${xrdb:color1:#BF616A}
 
 [bar/example]
 monitor = ${env:MONITOR:}
