@@ -9,6 +9,7 @@ endif
 " - For Neovim: stdpath('data') . '/plugged'
 call plug#begin('~/.vim/plugged')
 
+Plug 'mattn/webapi-vim'
 Plug 'junegunn/vim-github-dashboard'
 Plug 'tpope/vim-fugitive'
 Plug 'honza/vim-snippets'
