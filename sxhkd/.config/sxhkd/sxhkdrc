@@ -360,7 +360,7 @@ alt + ctrl + space
 # Toggle compositing
 super + ctrl + alt + space
 	{pkill picom ,\
-	picom -b --experimental-backends --vsync}
+	picom -b --experimental-backends }
 
 # Remove receptacles
 super + BackSpace
