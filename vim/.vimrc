@@ -58,4 +58,4 @@ autocmd! User GoyoLeave Limelight!
 filetype plugin on
 colorscheme nord
 "Keybinds
-
+set pastetoggle=<F3>
