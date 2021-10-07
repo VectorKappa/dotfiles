@@ -42,7 +42,7 @@ gnome-keyring-daemon &
 dunst &
 
 ## Set screen locker
-xss-lock -v i3lock-fancy-dualmonitor &
+xss-lock -v -- betterlockscreen -l &
 
 ###############################################################################################################################
 ##                                                  Autostart apps                                                           ##
