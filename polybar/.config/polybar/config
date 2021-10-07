@@ -196,7 +196,7 @@ bar-indicator-foreground = #fff
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
-bar-fill-foreground = #9f78e1
+bar-fill-foreground = ${colors.primary}
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
@@ -301,7 +301,7 @@ label-volume = %{T5}墳%{T-} %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted =%{T5}ﱝ%{T-} muted
-label-muted-foreground = #666
+label-muted-foreground = ${colors.foreground-alt}
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -369,7 +369,7 @@ format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn =  %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.alert}
 
 ramp-font = 5
 ramp-0 = 
@@ -385,7 +385,7 @@ expand-right = true
 
 format-spacing = 1
 label-open = %{T4}⏻%{T-}
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.alert}
 label-close = %{T4}ﰸ%{T-} cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
@@ -419,8 +419,8 @@ click-left = xlunch --input /etc/xlunch/entries.dsv --bc 2e3440aa >> /tmp/xlunch
 
 content = 
 content-padding = 1
-content-background = #BF616A
-content-foreground = #2E3440
+content-background = ${colors.alert}
+content-foreground = ${colors.background}
 content-font = 4
 
 [settings]
