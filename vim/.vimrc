@@ -8,7 +8,7 @@ endif
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 call plug#begin('~/.vim/plugged')
-
+Plug 'simnalamburt/vim-mundo'
 Plug 'mattn/webapi-vim'
 Plug 'junegunn/vim-github-dashboard'
 Plug 'tpope/vim-fugitive'
@@ -59,3 +59,4 @@ filetype plugin on
 colorscheme nord
 "Keybinds
 set pastetoggle=<F3>
+nnoremap <F5> :MundoToggle<CR>
