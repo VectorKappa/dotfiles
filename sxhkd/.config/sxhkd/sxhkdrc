@@ -372,4 +372,4 @@ super + BackSpace
 
 # Rotate the screen. WARNING: Laggy.
 mod5 + {Left,Down,Up,Right}
-	xrandr --output LVDS1 --rotate {left,inverted,normal,right}
+	rotate_desktop {left,inverted,normal,right}
