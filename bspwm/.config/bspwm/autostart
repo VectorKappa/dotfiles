@@ -29,9 +29,6 @@ eval $(awk -F'=' '/Exec=/ {print $2}' ~/.config/autostart/lxrandr-autostart.desk
 ## Map super key to trigger rofi when used alone
 xcape -e 'Super_L=Super_L|Shift_L|space' &
 
-## Automagically set gap width based on amount of windows open
-autogap &
-
 ## Polkit agent
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 

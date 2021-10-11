@@ -90,9 +90,9 @@ bspc rule -a dunst border=off manage=off
 #bspc desktop II --layout monocle
 
 
-##  Autogap adjusts windowgap automatically according to the number of
+##  Autogap adjusts windowgap automagically according to the number of
 ##  windows on the desktop. Using it disables negative window gap.
-#autogap &
+autogap &
 
 ##  This script balances all windows when new one is spawned 
 #euclid_balancer &
