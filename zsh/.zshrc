@@ -156,6 +156,7 @@ setopt interactivecomments
 
 
 
+zplug "kiurchv/asdf.plugin.zsh", defer:2
 
 zplug "plugins/emoji",			from:oh-my-zsh
 zplug "plugins/virtualenv",	from:oh-my-zsh
