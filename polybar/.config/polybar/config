@@ -60,8 +60,8 @@ modules-left = rofi bspwm
 modules-center = mpd_icon title
 modules-right = xkeyboard xbacklight pulseaudio memory cpu wlan eth battery temperature date powermenu
 
-tray-position = right
-tray-padding = 10
+;tray-position = right
+;tray-padding = 10
 ;tray-background = #0063ff
 
 wm-restack = bspwm
