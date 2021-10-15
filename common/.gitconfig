@@ -2,8 +2,8 @@
     autosetupmerge = true
 
 [commit]
-	gpgsign = true
-
+    gpgsign = true
+    verbose = true
 [push]
     default = upstream
 
