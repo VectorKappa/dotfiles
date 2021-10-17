@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+alias cd="z"
 # Easier navigation: .., ..., ...., .....
 alias ..="cd .."
 alias cd..="cd .."
