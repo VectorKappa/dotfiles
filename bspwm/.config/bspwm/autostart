@@ -6,6 +6,9 @@ xrdb merge .Xresources &
 ## Wallpaper.
 sh ~/.fehbg &
 
+## Launch side notification tray
+tint2 &
+
 ## Composition manager
 picom -b --experimental-backends --vsync &
 
@@ -41,8 +44,6 @@ dunst &
 ## Set screen locker
 xss-lock -v -- betterlockscreen -l &
 
-## Launch side notification tray
-tint2 &
 ###############################################################################################################################
 ##                                                  Autostart apps                                                           ##
 ###############################################################################################################################
