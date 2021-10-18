@@ -85,3 +85,6 @@ alias cantbebothered='git add -a && git commit -m $(curl -s http://whatthecommit
 alias please='sudo'
 alias simon-says='sudo'
 alias runhis="anyframe-widget-execute-history"
+
+# Default xclip to use Ctrl-c/Ctrl-v clipboard
+alias xclip="xclip -selection c"
