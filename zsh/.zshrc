@@ -156,9 +156,9 @@ setopt interactivecomments
 
 
 
-
-zplug "kiurchv/asdf.plugin.zsh", defer:2
-
+zplug "MichaelAquilina/zsh-you-should-use"
+zplug "redxtech/zsh-asdf-direnv", defer:2
+#zplug "raisty/alt-and-select"
 zplug "plugins/emoji",			from:oh-my-zsh
 zplug "plugins/virtualenv",	from:oh-my-zsh
 zplug "plugins/pip",			from:oh-my-zsh
@@ -175,16 +175,19 @@ zplug "plugins/colored-man-pages",      from:oh-my-zsh
 zplug "plugins/command-not-found",      from:oh-my-zsh
 zplug "plugins/tmux",                   from:oh-my-zsh
 zplug "plugins/urltools",               from:oh-my-zsh
-zplug "plugins/thefuck",                from:oh-my-zsh		#Used interchangably with
+#zplug "plugins/thefuck",                from:oh-my-zsh		#Used interchangably with
+zplug "laggardkernel/zsh-thefuck"
 #setopt correct							#<-This option
 # Load completion library for those sweet [tab] squares
 zplug "lib/completion",                 from:oh-my-zsh
-zplug "mollifier/anyframe",             from:github
+zplug 'wfxr/forgit'
+zplug "psprint/zsh-cmd-architect"
+#zplug "mollifier/anyframe",             from:github
 # Misc. visual tweaks
-zplug "modules/prompt",			from:prezto
+# zplug "modules/prompt",			from:prezto
 zplug "Tarrasch/zsh-autoenv"
 zplug "zpm-zsh/colors"
-zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
+# zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 # Syntax highlighting for commands, load last
 zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:3
 zplug "zsh-users/zsh-autosuggestions", defer:3
@@ -203,6 +206,7 @@ zplug load
 
 # prompt pure
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(zoxide init zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize
