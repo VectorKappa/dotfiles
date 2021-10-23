@@ -240,13 +240,13 @@ type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected = %{A1:alacritty -e nmtui &:}<ramp-signal> <label-connected>%{A}
+format-connected = %{A1:networkmanager_dmenu &:}<ramp-signal> <label-connected>%{A}
 format-connected-underline = #9f78e1
 label-connected = %essid%
 ;animation-connected-0 = %local_ip%
 ;animation-connected-1 = %essid%
 ;animation-connected-framerate=1000
-format-disconnected =%{A1:alacritty -e nmtui &:}%{T4}睊%{A}
+format-disconnected =%{A1:networkmanager_dmenu &:}%{T4}睊%{A}
 ;format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
