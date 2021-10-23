@@ -340,17 +340,18 @@ XF86AudioMicMute
 	amixer set Capture toggle
 
 XF86Launch1
-	rofi -modi drun,run,window,calc -show drun
+	rofi -modi drun,run,window,calc,windowcd,combi,keys,filebrowser,emoji -show drun
+
 # make sxhkd reload its configuration files:
 super + shift + Escape
-	pkill -USR1 -x sxhkd && sxhkd
+	pkill -SIGUSR1 -x sxhkd
 
 alt + space
-	rofi -modi drun,run,window,calc -show drun
+	ulauncher-toggle
 
 super + shift + @S
-	#flameshot gui
-  scrot
+	flameshot gui
+  #scrot
 # In case bspwmrc fails to execute/you wish have plugged in a new monitor
 super + shift + R
 	bspwmrc
