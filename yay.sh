@@ -82,4 +82,6 @@ yay -S \
 	bat-extras-git \
 	dust \
 	fd \
-	ulauncher
+	ulauncher \
+	networkmanager-dmenu-git \
+
