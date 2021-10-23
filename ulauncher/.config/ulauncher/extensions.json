@@ -1,0 +1,30 @@
+{
+    "com.github.dhelmr.ulauncher-tldr": {
+        "id": "com.github.dhelmr.ulauncher-tldr",
+        "url": "https://github.com/dhelmr/ulauncher-tldr",
+        "updated_at": "2021-10-23T14:41:41.298587",
+        "last_commit": "2ad5d29963db649775f68a7815af18509f4c287f",
+        "last_commit_time": "2021-09-07T14:26:21"
+    },
+    "com.github.tchar.ulauncher-albert-calculate-anything": {
+        "id": "com.github.tchar.ulauncher-albert-calculate-anything",
+        "url": "https://github.com/tchar/ulauncher-albert-calculate-anything",
+        "updated_at": "2021-10-23T15:06:05.891733",
+        "last_commit": "ee0903174c8b87cd1f7c3b6c1acef10702547507",
+        "last_commit_time": "2021-08-12T06:39:56"
+    },
+    "com.github.brpaz.ulauncher-faker": {
+        "id": "com.github.brpaz.ulauncher-faker",
+        "url": "https://github.com/brpaz/ulauncher-faker",
+        "updated_at": "2021-10-23T15:24:30.514917",
+        "last_commit": "45b7d1e505104a3ad6b7d3f7474b8b1726957b8d",
+        "last_commit_time": "2021-06-13T13:30:34"
+    },
+    "com.github.rnairn01.ulauncher-meme-my-text": {
+        "id": "com.github.rnairn01.ulauncher-meme-my-text",
+        "url": "https://github.com/RNairn01/ulauncher-meme-my-text",
+        "updated_at": "2021-10-23T15:27:33.164357",
+        "last_commit": "5d62830a7a92983a731e15645831f53d48dad913",
+        "last_commit_time": "2021-05-07T17:29:22"
+    }
+}
