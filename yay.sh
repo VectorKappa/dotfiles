@@ -81,4 +81,5 @@ yay -S \
 	bc \
 	bat-extras-git \
 	dust \
-	fd
+	fd \
+	ulauncher

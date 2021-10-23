@@ -86,6 +86,7 @@ bspc rule -a polybar border=off
 bspc rule -a 9menu border=off manage=off
 bspc rule -a tint2 border=off manage=off
 bspc rule -a dunst border=off manage=off
+bspc rule -a ulauncher border=off manage=off
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
 
