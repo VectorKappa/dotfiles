@@ -84,7 +84,7 @@ bspc rule -a brave-browser desktop=I
 #bspc rule -a deluge desktop=III
 bspc rule -a polybar border=off
 bspc rule -a 9menu border=off manage=off
-bspc rule -a tint2 border=off manage=off
+bspc rule -a tint2 layer=above border=off manage=off
 bspc rule -a dunst border=off manage=off
 bspc rule -a ulauncher border=off manage=off
 #bspc desktop I --layout monocle
