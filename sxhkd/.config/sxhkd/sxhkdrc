@@ -135,7 +135,7 @@ alt + {_,shift + }Tab
 
 # Go to specific window
 super + Tab
-	WindowSelector
+	rofi -modi window -show window
 
 #Focus windows by direction, works with multihead
 super +  {a,s,w,d}
