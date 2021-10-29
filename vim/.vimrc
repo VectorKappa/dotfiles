@@ -97,6 +97,7 @@ let g:airline_powerline_fonts = 1
 filetype plugin on
 colorscheme nord
 "Keybinds
-nnoremap <F4> :Goyo<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
 set pastetoggle=<F3>
+nnoremap <F4> :Goyo<CR>
 nnoremap <F5> :MundoToggle<CR>
