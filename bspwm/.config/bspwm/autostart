@@ -3,11 +3,11 @@ xsetroot -cursor_name left_ptr &
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
 xrdb merge .Xresources &
 
-## Wallpaper.
+## Wallpaper fallback
 sh ~/.fehbg &
 
-## Launch side notification tray
-tint2 &
+## Wallpaper changer
+variety &
 
 ## Composition manager
 picom -b --experimental-backends --vsync &
@@ -47,6 +47,11 @@ xss-lock -v -- betterlockscreen -l &
 ###############################################################################################################################
 ##                                                  Autostart apps                                                           ##
 ###############################################################################################################################
+sleep 2 &
+
+
+## Launch side notification tray
+tint2 &
 
 ## Screenshot daemon
 flameshot &
@@ -61,6 +66,7 @@ telegram-desktop -startintray &
 caffeine >/dev/null 2>&1 &
 
 ## Ulauncher
+sleep 3 &
 ulauncher >/dev/null 2>&1 &
 
 ###############################
