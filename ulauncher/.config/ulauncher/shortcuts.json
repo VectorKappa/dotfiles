@@ -28,5 +28,15 @@
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1634992751.7246554
+    },
+    "e7981763-6c31-4d93-9529-82e9773ef448": {
+        "id": "e7981763-6c31-4d93-9529-82e9773ef448",
+        "name": "Arch Wiki",
+        "keyword": "aw",
+        "cmd": "https://wiki.archlinux.org/index.php?search=%s",
+        "icon": "~/Downloads/Archlinux-icon-crystal-64.svg.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1636293377.4809132
     }
 }

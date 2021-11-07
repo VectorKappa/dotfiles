@@ -103,5 +103,124 @@
         "updated_at": "2021-10-23T23:07:29.129526",
         "last_commit": "03293cb335c8822dd5ea9b236bc6cce093a9516e",
         "last_commit_time": "2021-10-19T19:41:50"
+    },
+    "com.github.ralcaidev.ulauncher-extension-list": {
+        "id": "com.github.ralcaidev.ulauncher-extension-list",
+        "url": "https://github.com/ralcaidev/ulauncher-extension-list",
+        "updated_at": "2021-10-29T14:58:35.339306",
+        "last_commit": "0cb7711bc1dc89a76bcb89d29082e18deac28227",
+        "last_commit_time": "2019-07-19T06:31:41"
+    },
+    "com.github.aksdb.ulauncher-gitmoji": {
+        "id": "com.github.aksdb.ulauncher-gitmoji",
+        "url": "https://github.com/aksdb/ulauncher-gitmoji",
+        "updated_at": "2021-10-29T14:59:28.729232",
+        "last_commit": "9c7ff4d2ccd00a29856a86b5bac7caaa10469584",
+        "last_commit_time": "2021-09-23T12:55:59"
+    },
+    "com.github.noam09.ulauncher-remmina": {
+        "id": "com.github.noam09.ulauncher-remmina",
+        "url": "https://github.com/noam09/ulauncher-remmina",
+        "updated_at": "2021-10-29T15:04:02.871004",
+        "last_commit": "fd0745d43e79e945c1f531c4654131a8c0fe72d7",
+        "last_commit_time": "2021-03-14T09:46:56"
+    },
+    "com.github.brpaz.ulauncher-trello": {
+        "id": "com.github.brpaz.ulauncher-trello",
+        "url": "https://github.com/brpaz/ulauncher-trello",
+        "updated_at": "2021-10-29T15:04:53.998727",
+        "last_commit": "11efe336e5e34d5866ede5c2df9e23e6419e0206",
+        "last_commit_time": "2021-05-03T21:01:46"
+    },
+    "com.github.brpaz.ulauncher-statuspages": {
+        "id": "com.github.brpaz.ulauncher-statuspages",
+        "url": "https://github.com/brpaz/ulauncher-statuspages",
+        "updated_at": "2021-10-29T15:05:08.124056",
+        "last_commit": "ef71cdc608b85ad3f247b18a984542258c9e3250",
+        "last_commit_time": "2019-12-03T20:19:02"
+    },
+    "com.github.brpaz.ulauncher-brotab": {
+        "id": "com.github.brpaz.ulauncher-brotab",
+        "url": "https://github.com/brpaz/ulauncher-brotab",
+        "updated_at": "2021-10-29T15:05:55.774092",
+        "last_commit": "6abaac0e9fbcf5efb52ab8e5caf141794585e102",
+        "last_commit_time": "2021-06-05T10:31:10"
+    },
+    "com.github.mikebarkmin.ulauncher-duckduckgo": {
+        "id": "com.github.mikebarkmin.ulauncher-duckduckgo",
+        "url": "https://github.com/mikebarkmin/ulauncher-duckduckgo",
+        "updated_at": "2021-10-29T15:06:44.060840",
+        "last_commit": "f2ea6a187082c600a59acc9cca6e288d96f66cc0",
+        "last_commit_time": "2021-08-07T18:51:44"
+    },
+    "com.github.wsdfhjxc.ulauncher-qr-code": {
+        "id": "com.github.wsdfhjxc.ulauncher-qr-code",
+        "url": "https://github.com/wsdfhjxc/ulauncher-qr-code",
+        "updated_at": "2021-10-29T15:13:04.928103",
+        "last_commit": "2de05a08479fd6660ec513dd62f85b21b1eb6ab3",
+        "last_commit_time": "2021-02-11T22:40:12"
+    },
+    "com.github.dflock.ulauncher-xfwm-workspace-switcher": {
+        "id": "com.github.dflock.ulauncher-xfwm-workspace-switcher",
+        "url": "https://github.com/dflock/ulauncher-xfwm-workspace-switcher",
+        "updated_at": "2021-10-29T15:20:36.888770",
+        "last_commit": "0abc046db0703cfe4a7302d0d0391345015e086f",
+        "last_commit_time": "2021-02-04T05:46:46"
+    },
+    "com.github.ygun.ulauncher-nm": {
+        "id": "com.github.ygun.ulauncher-nm",
+        "url": "https://github.com/ygun/ulauncher-nm",
+        "updated_at": "2021-10-29T15:21:09.067104",
+        "last_commit": "036a0b3b24fb325f7aa648872c916d04966e7101",
+        "last_commit_time": "2021-02-03T13:17:59"
+    },
+    "com.github.kazumasan.ulauncher-sessions": {
+        "id": "com.github.kazumasan.ulauncher-sessions",
+        "url": "https://github.com/Kazumasan/ulauncher-sessions",
+        "updated_at": "2021-10-29T19:44:15.396645",
+        "last_commit": "d999aeb6db95695e82119c898d0e657d25320a4e",
+        "last_commit_time": "2021-08-13T20:20:23"
+    },
+    "com.github.msaistaken.ulauncher-translator": {
+        "id": "com.github.msaistaken.ulauncher-translator",
+        "url": "https://github.com/msaistaken/ulauncher-translator",
+        "updated_at": "2021-10-29T19:46:36.107259",
+        "last_commit": "824037cd06fb56162c0d629020bdc4b70ce3d77e",
+        "last_commit_time": "2021-07-25T18:22:55"
+    },
+    "com.github.ncroxas.coingecko-query": {
+        "id": "com.github.ncroxas.coingecko-query",
+        "url": "https://github.com/NCRoxas/coingecko-query",
+        "updated_at": "2021-10-29T19:51:13.096347",
+        "last_commit": "39cba721e9836ab44072b8067005c4e9832e86b6",
+        "last_commit_time": "2021-06-30T17:00:40"
+    },
+    "com.github.subutux.ulauncher-variety": {
+        "id": "com.github.subutux.ulauncher-variety",
+        "url": "https://github.com/subutux/ulauncher-variety",
+        "updated_at": "2021-10-29T19:53:49.756751",
+        "last_commit": "1b8ff57344cdf817435491c3e351bcc0e358af5d",
+        "last_commit_time": "2021-06-13T20:48:31"
+    },
+    "com.github.brpaz.ulauncher-timestamp": {
+        "id": "com.github.brpaz.ulauncher-timestamp",
+        "url": "https://github.com/brpaz/ulauncher-timestamp",
+        "updated_at": "2021-10-29T19:58:41.653629",
+        "last_commit": "09cbed761d1cd6b02080d204e46b79b29f1eb7e3",
+        "last_commit_time": "2019-12-03T20:06:45"
+    },
+    "com.github.friday.ulauncher-hash2": {
+        "id": "com.github.friday.ulauncher-hash2",
+        "url": "https://github.com/friday/ulauncher-hash2",
+        "updated_at": "2021-10-29T19:59:07.218841",
+        "last_commit": "7478980b8fd6d9da3454dd0fb9ec232d7457a3c6",
+        "last_commit_time": "2021-05-01T06:18:09"
+    },
+    "com.github.brpaz.ulauncher-dendron": {
+        "id": "com.github.brpaz.ulauncher-dendron",
+        "url": "https://github.com/brpaz/ulauncher-dendron",
+        "updated_at": "2021-10-29T20:05:04.895325",
+        "last_commit": "74dff09e1d267abc57039246d86cc2e00d081a31",
+        "last_commit_time": "2021-07-10T16:58:24"
     }
 }
