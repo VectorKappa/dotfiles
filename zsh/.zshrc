@@ -181,7 +181,6 @@ zplug "laggardkernel/zsh-thefuck"
 # Load completion library for those sweet [tab] squares
 zplug "lib/completion",                 from:oh-my-zsh
 zplug 'wfxr/forgit'
-zplug "psprint/zsh-cmd-architect"
 #zplug "mollifier/anyframe",             from:github
 # Misc. visual tweaks
 # zplug "modules/prompt",			from:prezto
