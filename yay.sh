@@ -102,6 +102,5 @@ yay -S \
 	bless \
 	variety \
 	handlr \
-	python-lorem \
 	termscp \
 	ananicy
