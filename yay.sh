@@ -21,7 +21,6 @@ yay -S \
 	kvantum-qt5 \
 	lxappearance \
 	nordic-darker-theme\
-	papirus-folders-nordic \
 	capitaine-cursors\
 	noto-fonts-emoji \
 	noto-fonts-cjk \
@@ -33,7 +32,6 @@ yay -S \
 	atool \
 	ffmpeg \
 	tigervnc \
-	xlunch \
 	rofi-calc \
 	rofi-emoji \
 	rofimoji \
@@ -62,7 +60,7 @@ yay -S \
 	poppler \
 	odt2txt \
 	gnome-keyring \
-	i3lock-fancy-dualmonitors-git \
+	betterlockscreen \
 	lxrandr \
 	feh \
 	nano \
@@ -84,4 +82,26 @@ yay -S \
 	fd \
 	ulauncher \
 	networkmanager-dmenu-git \
-
+	zellij \
+	webp-pixbuf-loader \
+	rnr \
+	mpv-handler \
+	yt-dlp \
+	ouch \
+	ytfzf \
+	themix-full-git \
+	papirus-nord \
+	xcape \
+	papirus-icon-theme \
+	lostfiles \
+	gitui \
+	procs \
+	acetoneiso2 \
+	imagemagick-full \
+	python-qrcode \
+	bless \
+	variety \
+	handlr \
+	python-lorem \
+	termscp \
+	ananicy
