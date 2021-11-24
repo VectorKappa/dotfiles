@@ -87,6 +87,7 @@ bspc rule -a 9menu border=off manage=off
 bspc rule -a tint2 layer=above border=off manage=off
 bspc rule -a dunst border=off manage=off
 bspc rule -a Ulauncher border=off
+bspc rule -a Variety state=floating rectangle=1600x120+0+440
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
 

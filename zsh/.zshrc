@@ -157,7 +157,7 @@ setopt interactivecomments
 
 
 zplug "MichaelAquilina/zsh-you-should-use"
-zplug "redxtech/zsh-asdf-direnv", defer:2
+#zplug "redxtech/zsh-asdf-direnv", defer:2
 #zplug "raisty/alt-and-select"
 zplug "plugins/emoji",			from:oh-my-zsh
 zplug "plugins/virtualenv",	from:oh-my-zsh

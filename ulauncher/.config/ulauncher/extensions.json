@@ -104,13 +104,6 @@
         "last_commit": "03293cb335c8822dd5ea9b236bc6cce093a9516e",
         "last_commit_time": "2021-10-19T19:41:50"
     },
-    "com.github.ralcaidev.ulauncher-extension-list": {
-        "id": "com.github.ralcaidev.ulauncher-extension-list",
-        "url": "https://github.com/ralcaidev/ulauncher-extension-list",
-        "updated_at": "2021-10-29T14:58:35.339306",
-        "last_commit": "0cb7711bc1dc89a76bcb89d29082e18deac28227",
-        "last_commit_time": "2019-07-19T06:31:41"
-    },
     "com.github.aksdb.ulauncher-gitmoji": {
         "id": "com.github.aksdb.ulauncher-gitmoji",
         "url": "https://github.com/aksdb/ulauncher-gitmoji",
@@ -159,20 +152,6 @@
         "updated_at": "2021-10-29T15:13:04.928103",
         "last_commit": "2de05a08479fd6660ec513dd62f85b21b1eb6ab3",
         "last_commit_time": "2021-02-11T22:40:12"
-    },
-    "com.github.dflock.ulauncher-xfwm-workspace-switcher": {
-        "id": "com.github.dflock.ulauncher-xfwm-workspace-switcher",
-        "url": "https://github.com/dflock/ulauncher-xfwm-workspace-switcher",
-        "updated_at": "2021-10-29T15:20:36.888770",
-        "last_commit": "0abc046db0703cfe4a7302d0d0391345015e086f",
-        "last_commit_time": "2021-02-04T05:46:46"
-    },
-    "com.github.ygun.ulauncher-nm": {
-        "id": "com.github.ygun.ulauncher-nm",
-        "url": "https://github.com/ygun/ulauncher-nm",
-        "updated_at": "2021-10-29T15:21:09.067104",
-        "last_commit": "036a0b3b24fb325f7aa648872c916d04966e7101",
-        "last_commit_time": "2021-02-03T13:17:59"
     },
     "com.github.kazumasan.ulauncher-sessions": {
         "id": "com.github.kazumasan.ulauncher-sessions",

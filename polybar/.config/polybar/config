@@ -57,8 +57,8 @@ font-4 = "SauceCodePro Nerd Font Mono:size=13;3"
 font-5 = "Noto Color Emoji:scale=10;1"
 
 modules-left = rofi bspwm
-modules-center = mpd_icon title
-modules-right = xkeyboard xbacklight pulseaudio memory cpu wlan eth battery temperature date powermenu
+modules-center = mpd_icon sys_icon title
+modules-right = xkeyboard xbacklight pulseaudio wlan battery temperature date powermenu
 
 ;tray-position = right
 ;tray-padding = 10
@@ -108,6 +108,45 @@ override-redirect = true
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[bar/sys]
+monitor = ${env:MONITOR:}
+width = 66.66%
+height = 27
+offset-x = 17.66%
+offset-y = 35
+radius = 10
+fixed-center = true
+
+foreground = ${colors.background}
+background = #5E81AC
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = "SauceCodePro Nerd Font Mono:size=10"
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = "SauceCodePro Nerd Font Mono:size=16;4"
+font-4 = "SauceCodePro Nerd Font Mono:size=13;2"
+
+modules-center = temperature
+modules-right = memory cpu wlan eth
+
+override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
 
 [module/xwindow]
 type = internal/xwindow
@@ -413,9 +452,16 @@ content = 
 content-font = 4
 ;content-underline = #0a6cf5
 
+[module/sys_icon]
+type = custom/text
+click-left = toggle-run "polybar sys"
+content = 
+content-font = 4
+
 [module/rofi]
 type = custom/text
-click-left = xlunch --input /etc/xlunch/entries.dsv --bc 2e3440aa >> /tmp/xlunchlog.log 2>&1
+click-left = jgmenu_run
+;xlunch --input /etc/xlunch/entries.dsv --bc 2e3440aa >> /tmp/xlunchlog.log 2>&1
 
 content = 
 content-padding = 1

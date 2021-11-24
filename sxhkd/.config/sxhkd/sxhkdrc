@@ -242,15 +242,15 @@ super + ctrl + button4
 # app where your mouse was when you opened the menu. Smartsplit only chooses
 # biggest dimension of the window, MouseLaunch only cares which edge is closer.
 # mod5 is alt_gr (first key right from space) on most keyboards.
-mod5 + @button1
-    MouseLaunch ; mygtkmenui -- .config/GTKmenu/LaunchMenu
+#mod5 + @button1
+    #MouseLaunch ; mygtkmenui -- .config/GTKmenu/LaunchMenu
 #	smartsplit ; dboxmenu
 
 # Spawn window manipulation menu
 # Mod1 is alt
 #    BspwmWindowMenu
-mod1 + @button1
-    mygtkmenui -- .config/GTKmenu/BspwmWindowMenui
+#mod1 + @button1
+    #mygtkmenui -- .config/GTKmenu/BspwmWindowMenui
 
 
 #
@@ -268,9 +268,8 @@ super + space
 
 # Triggered by jus tapping super
 super + shift + @space
-	xlunch --
+	ulauncher-toggle
 	#gnome-pie -o 460 --display=:0
-#	dmenu_recent -h $PANEL_HEIGHT -fn 'xos4 Terminus:size=15' -i
 
 super + shift + Return
 	urxvt
@@ -341,6 +340,9 @@ XF86AudioMicMute
 
 XF86Launch1
 	rofi -modi drun,run,window,calc,windowcd,combi,keys,filebrowser,emoji -show drun
+
+ctrl + shift + Escape
+	alacritty -e htop
 
 # make sxhkd reload its configuration files:
 super + shift + Escape

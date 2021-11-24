@@ -70,7 +70,10 @@ alias map="xargs -n1"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
 alias p="ping 1.1.1.1"						#See if connection works
+alias pp="prettyping 1.1.1.1"
+
 alias path='echo -e ${PATH//:/\\n}'				#Print each PATH entry on a separate line
 alias mkdir='mkdir -pv'						#Intuitive mkdir
 # get top process eating memory
