@@ -1,0 +1,38 @@
+[Added Associations]
+application/javascript=vim.desktop;
+audio/mpeg=cantata.desktop;
+audio/x-wav=cantata.desktop;
+image/jpeg=feh.desktop;
+image/png=feh.desktop;
+text/html=vim.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-SY2N70.desktop;
+
+[Default Applications]
+application/pdf=xreader.desktop;
+application/vnd.flatpak.ref=bauh.desktop;
+application/x-compressed-tar=org.gnome.FileRoller.desktop;
+application/x-remmina=org.remmina.Remmina.desktop;
+application/x-wine-extension-ini=vim.desktop;
+application/x-yaml=vim.desktop;
+audio/mpeg=cantata.desktop;
+audio/x-wav=cantata.desktop;
+image/jpeg=feh.desktop;
+image/png=feh.desktop;
+text/html=brave-browser-dev.desktop;
+text/plain=vim.desktop;
+text/yaml=vim.desktop;
+video/mp4=mpv.desktop;
+video/mpeg=mpv.desktop;
+video/webm=mpv.desktop;
+x-scheme-handler/about=brave-browser-dev.desktop;
+x-scheme-handler/devdocs=brave-ahiigpfcghkbjfcibpojancebdfjmoop-Default.desktop;
+x-scheme-handler/http=brave-browser-dev.desktop;
+x-scheme-handler/https=brave-browser-dev.desktop;
+x-scheme-handler/mpv=mpv-handler.desktop;
+x-scheme-handler/rdp=org.remmina.Remmina.desktop;
+x-scheme-handler/remmina=org.remmina.Remmina.desktop;
+x-scheme-handler/spice=org.remmina.Remmina.desktop;
+x-scheme-handler/terminal=Alacritty.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-SY2N70.desktop;
+x-scheme-handler/unknown=brave-browser-dev.desktop;
+x-scheme-handler/vnc=org.remmina.Remmina.desktop;
