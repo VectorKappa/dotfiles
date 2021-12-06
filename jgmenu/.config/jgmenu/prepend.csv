@@ -1,3 +1,4 @@
 Terminal,alacritty,utilities-terminal
 Browser,brave-browser-dev,brave-browser-dev
+File Manager,nemo,system-file-manager
 ^sep()
