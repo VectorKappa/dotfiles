@@ -67,6 +67,9 @@ caffeine >/dev/null 2>&1 &
 sleep 3 &
 ulauncher >/dev/null 2>&1 &
 
+## Desktop entries in autostart
+dex -as ~/.config/autostart/ &
+
 ###############################
 ## THINKPAD-SPECIFIC         ##
 ###############################
