@@ -17,6 +17,7 @@ audio/mpeg=cantata.desktop;
 audio/x-wav=cantata.desktop;
 image/jpeg=feh.desktop;
 image/png=feh.desktop;
+image/svg+xml=feh.desktop;
 inode/directory=nemo.desktop;
 text/html=brave-browser-dev.desktop;
 text/plain=vim.desktop;
