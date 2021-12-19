@@ -5,7 +5,6 @@ audio/x-wav=cantata.desktop;
 image/jpeg=feh.desktop;
 image/png=feh.desktop;
 text/html=vim.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-SY2N70.desktop;
 
 [Default Applications]
 application/pdf=xreader.desktop;
@@ -36,7 +35,6 @@ x-scheme-handler/rdp=org.remmina.Remmina.desktop;
 x-scheme-handler/remmina=org.remmina.Remmina.desktop;
 x-scheme-handler/spice=org.remmina.Remmina.desktop;
 x-scheme-handler/terminal=Alacritty.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-SY2N70.desktop;
 x-scheme-handler/tg=ferdi.desktop;
 x-scheme-handler/unknown=brave-browser-dev.desktop;
 x-scheme-handler/vnc=org.remmina.Remmina.desktop;
