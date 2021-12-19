@@ -16,12 +16,17 @@ Plug 'simnalamburt/vim-mundo'
 ""For :RustPlay via polyglot/syntastic
 Plug 'mattn/webapi-vim'
 
+"""""COMMON SYNTAX CHECKER"""""
+Plug 'scrooloose/syntastic'
+Plug 'sheerun/vim-polyglot'
+"""""HTML"""""
+Plug 'mattn/emmet-vim'
 
 Plug 'junegunn/vim-github-dashboard'
 Plug 'honza/vim-snippets'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
+Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'vim-scripts/indentLine.vim'
 Plug 'rhysd/git-messenger.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -57,11 +62,6 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
-"""""COMMON SYNTAX CHECKER"""""
-Plug 'scrooloose/syntastic'
-Plug 'sheerun/vim-polyglot'
-"""""HTML"""""
-Plug 'mattn/emmet-vim'
 
 
 " Initialize plugin system
@@ -96,6 +96,8 @@ endif
 let g:airline_powerline_fonts = 1
 filetype plugin on
 colorscheme nord
+let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_checkers = ['python']
 "Keybinds
 nnoremap <F2> :NERDTreeToggle<CR>
 set pastetoggle=<F3>

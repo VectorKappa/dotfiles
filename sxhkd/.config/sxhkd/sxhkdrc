@@ -71,8 +71,8 @@ super + ctrl + c
 # ______________
 
 # Autopresel (split window in its largest dimension)
-ctrl + space
-	auto-presel
+#ctrl + space
+	#auto-presel
 
 # Presel window for splitting in certain direction
 alt + ctrl + {a,s,w,d}
