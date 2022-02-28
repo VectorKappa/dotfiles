@@ -168,8 +168,6 @@ zplug "plugins/gpg-agent",		from:oh-my-zsh
 zplug "plugins/rsync",			from:oh-my-zsh
 zplug "plugins/rust",			from:oh-my-zsh
 zplug "plugins/arch",			from:oh-my-zsh
-zplug "plugins/rustup",			from:oh-my-zsh
-zplug "plugins/cargo",			from:oh-my-zsh
 zplug "plugins/git",                    from:oh-my-zsh
 zplug "plugins/colored-man-pages",      from:oh-my-zsh
 zplug "plugins/command-not-found",      from:oh-my-zsh
