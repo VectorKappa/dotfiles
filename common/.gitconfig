@@ -253,3 +253,5 @@
 	signingkey = 0917E6568B3A9A02
 [mergetool]
 	keepBackup = true
+[init]
+	defaultBranch = main
