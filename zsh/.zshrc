@@ -184,11 +184,12 @@ zplug 'wfxr/forgit'
 # zplug "modules/prompt",			from:prezto
 zplug "Tarrasch/zsh-autoenv"
 zplug "zpm-zsh/colors"
+zplug "Mellbourn/zabb", from:github
 # zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 # Syntax highlighting for commands, load last
 zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:3
 zplug "zsh-users/zsh-autosuggestions", defer:3
-zplug "RobSis/zsh-completion-generator", defer:3
+zplug "Aloxaf/gencomp", defer:3
 zplug "romkatv/powerlevel10k", as:theme, depth:1
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -207,3 +208,5 @@ eval "$(zoxide init zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize
+
+source ~/.config/broot/launcher/bash/br
