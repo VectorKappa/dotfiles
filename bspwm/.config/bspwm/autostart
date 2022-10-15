@@ -10,7 +10,7 @@ sh ~/.fehbg &
 variety &
 
 ## Composition manager
-picom -b --experimental-backends --vsync &
+picom -b --vsync &
 
 ## enable local fonts in .fonts directory
 xset +fp /usr/share/fonts/local &
