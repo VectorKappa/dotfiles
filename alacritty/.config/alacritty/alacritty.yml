@@ -1,6 +1,11 @@
+#import:
+  #- ~/.config/alacritty/colors.yml
 import:
-  - ~/.config/alacritty/colors.yml
-
+  # uncomment the flavour you want below:
+# - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+# - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+# - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
 scrolling:
   history: 100000
 
@@ -98,14 +103,14 @@ bell:
 
   # Duration of the visual bell flash in milliseconds. A `duration` of `0` will
   # disable the visual bell animation.
-  duration: 25
+  duration: 250
 
   # Visual bell animation color.
-  color: '#4C566A'
+  color: '#FF0000' #'#4C566A'
 
   command:
     program: aplay
-    args: ["/home/vectorkappa/Music/beeps/wav/honk-sound.wav"]
+    args: ["/home/vectorkappa/Music/beeps/wav/erro.wav"]
 hints:
     # URL launcher
     #
