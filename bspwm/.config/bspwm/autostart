@@ -52,7 +52,10 @@ xss-lock -v -- betterlockscreen -l &
 ###############################################################################################################################
 
 ## Launch side notification tray, and move it to top
-(tint2; sleep 10; xdo raise -n tint2) &
+#(tint2; sleep 10; xdo raise -n tint2) &
+
+## launch tray
+stalonetray -v -t --geometry=1x24+0+35 &
 
 ## Screenshot daemon
 flameshot &
