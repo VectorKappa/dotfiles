@@ -51,6 +51,9 @@ xss-lock -v -- betterlockscreen -l &
 ##                                                  Autostart apps                                                           ##
 ###############################################################################################################################
 
+## Launch jgmenu - dirty hack :)
+jgmenu --at-pointer --hide-on-startup
+
 ## Launch side notification tray, and move it to top
 #(tint2; sleep 10; xdo raise -n tint2) &
 
