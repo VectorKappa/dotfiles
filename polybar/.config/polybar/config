@@ -139,6 +139,7 @@ font-2 = siji:pixelsize=10;1
 font-3 = "SauceCodePro Nerd Font Mono:size=16;4"
 font-4 = "SauceCodePro Nerd Font Mono:size=13;2"
 
+modules-left  = restart_polybar
 modules-center = temperature
 modules-right = memory cpu wlan eth
 
@@ -456,6 +457,12 @@ content-font = 4
 type = custom/text
 click-left = toggle-run "polybar sys"
 content = 
+content-font = 4
+
+[module/restart_polybar]
+type = custom/text
+click-left = ~/.config/polybar/launch.sh
+content = RESTART
 content-font = 4
 
 [module/rofi]
