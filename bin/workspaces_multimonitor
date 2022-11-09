@@ -52,8 +52,8 @@ done
      done
   fi
 
-##Polybar launch
- /home/$USER/.dotfiles/polybar/.config/polybar/launch.sh &
+###Polybar launch
+# /home/$USER/.dotfiles/polybar/.config/polybar/launch.sh &
 
 ##Set wallpaper
  /home/$USER/.fehbg
