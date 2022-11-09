@@ -26,9 +26,11 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'vim-scripts/indentLine.vim'
 Plug 'rhysd/git-messenger.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'arcticicestudio/nord-vim'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/vim-easy-align'
+
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+
 
 """""CLUTTER-FREE EDITING"""""
 Plug 'junegunn/goyo.vim'
@@ -59,6 +61,8 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'kosayoda/nvim-lightbulb'
 Plug 'antoinemadec/FixCursorHold.nvim'
@@ -69,6 +73,9 @@ Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 " 9000+ Snippets
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+
+Plug 'christoomey/vim-system-copy'
+
 
 " Initialize plugin system
 call plug#end()
@@ -88,7 +95,7 @@ autocmd! User GoyoLeave Limelight!
 autocmd CursorHold,CursorHoldI * lua require('nvim-lightbulb').update_lightbulb()
 
 if has("persistent_undo")
-   let target_path = expand('~/.undodir')
+   let target_path = expand('~/.nvimundodir')
 
     " create the directory and any parent directories
     " if the location does not exist.
@@ -99,25 +106,40 @@ if has("persistent_undo")
     let &undodir=target_path
     set undofile
 endif
+
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'CHADopen' | execute 'cd '.argv()[0] | endif
+
 let g:airline_powerline_fonts = 1
+
 filetype plugin on
-colorscheme nord
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers = ['bandit', 'python']
-"Keybinds
+
+" Keybinds
 nnoremap <F2> :CHADopen<CR>
 set pastetoggle=<F3>
 nnoremap <F4> :Goyo<CR>
 nnoremap <F5> :MundoToggle<CR>
-map <S-> +p
+
+""Legacy" bindings for cut/copy/paste
+imap <C-X> "+x
+imap <C-C> "+y
+imap <C-V> "+gP
 
 
 " Neovim specific settings:
 set mouse=a
-" Neovide specific settings:
 
+" Neovide specific settings:
 let g:neovide_refresh_rate=60
 let g:neovide_input_use_logo=v:false
+
+let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
+
+lua require("catppuccin").setup()
+
+colorscheme catppuccin
+
+autocmd VimEnter * execute 'COQnow -s'
 
