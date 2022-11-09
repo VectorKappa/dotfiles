@@ -1,5 +1,5 @@
 ###############################################################################################################################
-#																									 bspwm hotkeys
+#																									    bspwm hotkeys
 ###############################################################################################################################
 
 # Cleanly quit bspwm
@@ -12,7 +12,7 @@ super + F1
 
 #
 # Window manipulation
-# ______________
+#--------------------------------------------------------------
 
 # BSPWM WINDOW STATES:
 
@@ -20,6 +20,9 @@ super + F1
 #pseudo_tiled - A tiled window that automatically shrinks but doesn’t stretch beyond its floating size.
 #floating - Can be moved/resized freely. Although it doesn’t use any tiling space, it is still part of the window tree.
 #fullscreen - Fills its monitor rectangle and has no borders.
+
+#--------------------------------------------------------------
+
 # Close window
 super + x
 	bspc node -c
@@ -31,11 +34,15 @@ super + shift + x
 # Toggle tiling mode of window
 super + shift + t
 	bspc node -t {pseudo_tiled,tiled}
+
+# Toggle floating mode of window
 super + t
 	{bspc node -t floating && window-placer $(bspc query -T -d | grep -o '"state":"floating"' | wc -l),bspc node -t tiled}
+
 # Force all windows of the desktop to tile
 super + ctrl + t
 	bspcp tile
+
 # Force all windows of the desktop to float and arrange them
 super + ctrl + shift + t
 	bspcp float
@@ -57,12 +64,16 @@ super + Escape
 	bspc node -g locked
 
 ### Map or unmap windows (functional equivalent of "minimize")
+
+# Show hidden windows
 super + c
     whid dmenu
 
+# Hide window
 super + shift + c
     whid hide
 
+# Show the most recently hidden window
 super + ctrl + c
     whid last
 
@@ -87,6 +98,7 @@ alt + ctrl + {Left,Down,Up,Right}
 # cancel the preselection for the focused node
 super + ctrl + space
 	bspc node -p cancel
+
 # Presel the desktop for splitting in certain direction
 # alt + shift + {a,s,w,d}
 	# bspc node @/ -p \~{west,south,north,east}
@@ -273,6 +285,7 @@ super + shift + @space
 
 super + shift + Return
 	urxvt
+
 super + z
 	alacritty
 
@@ -288,7 +301,6 @@ super + shift + b
 super + e
 	nemo
 
-# Use slightly bigger font for ranger
 super + shift + e
 	alacritty -e ranger
 
@@ -297,11 +309,12 @@ super + shift + l
 
 Print
 #	scrot
-  flameshot gui
+  flameshot screen -c
 
 #
 # Media keys
 #
+
 XF86AudioPrev
 	playerctl previous
 
@@ -333,7 +346,7 @@ XF86Sleep
 	systemctl suspend
 
 XF86Display
-	workspaces_multimonitor
+	workspaces_multimonitor; $HOME/.config/polybar/launch.sh
 
 shift + XF86Display
 	arandr
@@ -345,7 +358,7 @@ XF86Launch1
 	rofi -modi drun,run,window,calc,windowcd,combi,keys,filebrowser,emoji -show drun
 
 ctrl + shift + Escape
-	alacritty -e htop
+	alacritty -e btop
 
 # make sxhkd reload its configuration files:
 super + shift + Escape
@@ -362,11 +375,10 @@ super + shift + R
 	bspwmrc
 #edit this file
 alt + ctrl + space
-	vim ~/.config/sxhkd/sxhkdrc
+	$EDITOR ~/.config/sxhkd/sxhkdrc
 # Toggle compositing
 super + ctrl + alt + space
-	{pkill picom ,\
-	picom -b --vsync }
+	{pkill picom, picom -b --vsync }
 
 # Remove receptacles
 super + BackSpace
