@@ -128,13 +128,6 @@ imap <C-C> "+y
 imap <C-V> "+gP
 
 
-" Neovim specific settings:
-set mouse=a
-
-" Neovide specific settings:
-let g:neovide_refresh_rate=60
-let g:neovide_input_use_logo=v:false
-
 let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
 
 lua require("catppuccin").setup()
