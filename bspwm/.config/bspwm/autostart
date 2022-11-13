@@ -52,13 +52,14 @@ xss-lock -v -- betterlockscreen -l &
 ###############################################################################################################################
 
 ## Launch jgmenu - dirty hack :)
+rm ~/.jgmenu-lockfile;
 jgmenu --at-pointer --hide-on-startup &
 
 ## Launch side notification tray, and move it to top
 #(tint2; sleep 10; xdo raise -n tint2) &
 
 ## launch tray
-stalonetray -v -t --geometry=1x24+0+35 &
+stalonetray -v -t --geometry=1x48+0+35 &
 
 ## Screenshot daemon
 flameshot &
@@ -73,7 +74,7 @@ telegram-desktop -startintray &
 caffeine >/dev/null 2>&1 &
 
 ## Ulauncher
-sleep 3 &
+sleep 3 ;
 ulauncher --hide-window >/dev/null 2>&1 &
 
 ## Activity watch
@@ -91,7 +92,7 @@ dockd --daemon &
 ###############################################################################################################################
 ##                                                  Launch polybar - Keep last!                                              ##
 ###############################################################################################################################
-sleep 3 ;
+sleep 7 ;
 $HOME/.config/polybar/launch.sh &
 
 
