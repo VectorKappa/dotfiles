@@ -15,7 +15,7 @@ env:
 window:
   decorations: none
   dynamic_title: true
-
+  opacity: 0.1
 font:
   # Normal (roman) font face
   normal:
