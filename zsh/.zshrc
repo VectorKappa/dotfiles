@@ -25,7 +25,9 @@ test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 source ~/.aliases
 autoload -U colors
 colors
-
+autoload zcalc
+autoload zmv
+autoload zed
 ###############################################################################################################################
 #                                                          History Settings                                                   #
 ###############################################################################################################################
@@ -195,7 +197,6 @@ zinit light jeffreytse/zsh-vi-mode
 ##zplug "plugins/tmux",                   from:oh-my-zsh
 #zplug "plugins/urltools",               from:oh-my-zsh
 ##zplug "plugins/thefuck",                from:oh-my-zsh		#Used interchangably with
-#zplug "laggardkernel/zsh-thefuck"
 ##setopt correct							#<-This option
 ## Load completion library for those sweet [tab] squares
 #zplug "lib/completion",                 from:oh-my-zsh
