@@ -8,31 +8,43 @@ fi
 ###############################################################################################################################
 #                                                             Initialization                                                  #
 ###############################################################################################################################
-#Check if zplug is installed, if not, clone it and install it.
-if [[ ! -d ~/.zplug ]]; then
-        git clone https://github.com/zplug/zplug ~/.zplug
-        source ~/.zplug/init.zsh && zplug update --self
+
+
+# Setting up Zinit, if not installed then clone it in.
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+if [[ ! -d $ZINIT_HOME ]]; then
+	mkdir -p "$(dirname $ZINIT_HOME)"
+	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-#source external files 
+# Load Zinit!
+source "${ZINIT_HOME}/zinit.zsh"
+
+#source external files
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
-source ~/.zplug/init.zsh	#Zplug plugin manager initialization
-source ~/.aliases		#Source aliases
-#expose colors to other applications
+source ~/.aliases
 autoload -U colors
 colors
+
 ###############################################################################################################################
 #                                                          History Settings                                                   #
 ###############################################################################################################################
-HISTFILE=~/.zsh_history		#History file - zsh in name, to differentiate, idk
-HISTSIZE=1000010000		#1B history entries - storage space is cheap :)
-SAVEHIST=1000000000		#A margin to store some duplicates
-setopt INC_APPEND_HISTORY_TIME	#Black magic, honestly - history nonblockingly gets written to histfile, but separate sessions keep their separate histories
-setopt HIST_VERIFY		#Forces user to confirm banging commands from history (!! pastes previous command to prompt)
-setopt HIST_IGNORE_DUPS		#Ignores duplicates of commands directly before
-setopt HIST_EXPIRE_DUPS_FIRST	#Pretty self-explanatory, really
-setopt HIST_IGNORE_SPACE	#Ignores commands with preceding space
-setopt EXTENDED_HISTORY		#Appends timestamps and run duration to the history file
+
+HISTFILE=~/.zsh_history   #History file - zsh in name, to differentiate, idk
+HISTSIZE=1000010000   #1B history entries - storage space is cheap :)
+SAVEHIST=1000000000   #A margin to store some duplicates
+setopt INC_APPEND_HISTORY_TIME  #Black magic, honestly - history nonblockingly gets written to histfile, but separate sessions keep their separate histories
+setopt HIST_VERIFY    #Forces user to confirm banging commands from history (!! pastes previous command to prompt)
+setopt HIST_IGNORE_DUPS   #Ignores duplicates of commands directly before
+setopt HIST_EXPIRE_DUPS_FIRST #Pretty self-explanatory, really
+setopt HIST_IGNORE_SPACE  #Ignores commands with preceding space
+setopt EXTENDED_HISTORY   #Appends timestamps and run duration to the history file
+
+
+###############################################################################################################################
+#                                                          Keybinds                                                   #
+###############################################################################################################################
+
 
 # Make sure that the terminal is in application mode when zle is active, since only then values from $terminfo are valid
 if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
@@ -46,14 +58,9 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
         zle -N zle-line-finish
 fi
 
-#bash-like word character detection (alphanumeric only)
-autoload -U select-word-style
-select-word-style bash
-
-#GIANT KEYBOARD CONFIG BLOCK (From oh-my-zsh)(with further changes)
 bindkey '\ew' kill-region                             # [Esc-w] - Remove chars from the cursor to the mark
-bindkey -s '\el' 'ls\n'                               # [Esc-l] - run command: ls
 bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
+
 if [[ "${terminfo[kpp]}" != "" ]]; then
 	  bindkey "${terminfo[kpp]}" up-line-or-history       # [PageUp] - Up a line of history
 fi
@@ -92,6 +99,10 @@ else
 	bindkey "^[3;5~" delete-char
 	bindkey "\e[3~" delete-char
 fi
+
+
+PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+
 
 case "${TERM}" in
     cons25*|linux) # plain BSD/Linux console
@@ -138,75 +149,74 @@ case "${TERM}" in
 esac
 
 
-
-
-
-
-
-
-
-
-
-
 setopt completealiases
 setopt interactivecomments
 
+#bash-like word character detection (alphanumeric only)
+autoload -U select-word-style
+select-word-style bash
 
+# Load powerlevel10k theme
+zinit ice depth"1"                   ##git clone depth
+zinit light romkatv/powerlevel10k
 
+#zplug <repo/plugin>, tag1:<option1>, tag2:<option2>
 
+#zi ice tag1"<option1>" tag2"<option2>"
+#zi load <repo/plugin>
 
+zinit ice wait lucid
+zinit light MichaelAquilina/zsh-you-should-use
 
-zplug "MichaelAquilina/zsh-you-should-use"
-#zplug "redxtech/zsh-asdf-direnv", defer:2
-#zplug "raisty/alt-and-select"
-zplug "plugins/emoji",			from:oh-my-zsh
-zplug "plugins/virtualenv",	from:oh-my-zsh
-zplug "plugins/pip",			from:oh-my-zsh
-zplug "plugins/nmap",			from:oh-my-zsh
-zplug "plugins/ipfs",			from:oh-my-zsh
-zplug "plugins/gpg-agent",		from:oh-my-zsh
-zplug "plugins/rsync",			from:oh-my-zsh
-zplug "plugins/rust",			from:oh-my-zsh
-zplug "plugins/arch",			from:oh-my-zsh
-zplug "plugins/git",                    from:oh-my-zsh
-zplug "plugins/colored-man-pages",      from:oh-my-zsh
-zplug "plugins/command-not-found",      from:oh-my-zsh
-zplug "plugins/tmux",                   from:oh-my-zsh
-zplug "plugins/urltools",               from:oh-my-zsh
-#zplug "plugins/thefuck",                from:oh-my-zsh		#Used interchangably with
-zplug "laggardkernel/zsh-thefuck"
-#setopt correct							#<-This option
-# Load completion library for those sweet [tab] squares
-zplug "lib/completion",                 from:oh-my-zsh
-zplug 'wfxr/forgit'
-#zplug "mollifier/anyframe",             from:github
-# Misc. visual tweaks
-# zplug "modules/prompt",			from:prezto
-zplug "Tarrasch/zsh-autoenv"
-zplug "zpm-zsh/colors"
-zplug "Mellbourn/zabb", from:github
-# zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
-# Syntax highlighting for commands, load last
-zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:3
-zplug "zsh-users/zsh-autosuggestions", defer:3
-zplug "Aloxaf/gencomp", defer:3
-zplug "romkatv/powerlevel10k", as:theme, depth:1
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
+zinit ice wait lucid
+zinit light laggardkernel/zsh-thefuck
 
-# Then, source plugins and add commands to $PATH
-zplug load
+# zsh-autosuggestions
+zinit ice wait lucid atload"!_zsh_autosuggest_start"
+zinit load zsh-users/zsh-autosuggestions
 
-# prompt pure
+# forgit
+zinit ice wait lucid
+zinit load 'wfxr/forgit'
+
+# Vi mode :)
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
+#zplug "plugins/virtualenv",	from:oh-my-zsh
+#zplug "plugins/pip",			from:oh-my-zsh
+#zplug "plugins/nmap",			from:oh-my-zsh
+#zplug "plugins/ipfs",			from:oh-my-zsh
+##zplug "plugins/gpg-agent",		from:oh-my-zsh
+#zplug "plugins/rsync",			from:oh-my-zsh
+#zplug "plugins/rust",			from:oh-my-zsh
+#zplug "plugins/git",                    from:oh-my-zsh
+#zplug "plugins/colored-man-pages",      from:oh-my-zsh
+#zplug "plugins/command-not-found",      from:oh-my-zsh
+##zplug "plugins/tmux",                   from:oh-my-zsh
+#zplug "plugins/urltools",               from:oh-my-zsh
+##zplug "plugins/thefuck",                from:oh-my-zsh		#Used interchangably with
+#zplug "laggardkernel/zsh-thefuck"
+##setopt correct							#<-This option
+## Load completion library for those sweet [tab] squares
+#zplug "lib/completion",                 from:oh-my-zsh
+##zplug "mollifier/anyframe",             from:github
+## Misc. visual tweaks
+## zplug "modules/prompt",			from:prezto
+#zplug "Tarrasch/zsh-autoenv"
+#zplug "zpm-zsh/colors"
+#zplug "Mellbourn/zabb", from:github
+## zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
+## Syntax highlighting for commands, load last
+#zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:3
+#zplug "Aloxaf/gencomp", defer:3
+
+zinit snippet ~/.zsh_compl/zoxide
+
+# Autosuggestions & fast-syntax-highlighting
+zinit ice wait lucid atload"zpcompinit; zpcdreplay"
+zinit light zdharma-continuum/fast-syntax-highlighting
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(zoxide init zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize
-
-source ~/.config/broot/launcher/bash/br
