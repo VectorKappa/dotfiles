@@ -115,6 +115,9 @@ autogap &
 #Keybindings daemon
 sxhkd &
 
+wmname LG3D;
+export _JAVA_AWT_WM_NONREPARENTING=1;
+
 #Source autostartfile. Uncomment this if you use bspwm-git
 . $HOME/.config/bspwm/autostart > /tmp/bspwm-autostart.log 2>&1
 
