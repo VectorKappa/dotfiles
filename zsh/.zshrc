@@ -212,10 +212,15 @@ zinit light jeffreytse/zsh-vi-mode
 #zplug "Aloxaf/gencomp", defer:3
 
 zinit snippet ~/.zsh_compl/zoxide
+zinit snippet OMZL::completion.zsh
 
-# Autosuggestions & fast-syntax-highlighting
-zinit ice wait lucid atload"zpcompinit; zpcdreplay"
-zinit light zdharma-continuum/fast-syntax-highlighting
+zinit wait lucid for \
+ atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+    zdharma-continuum/fast-syntax-highlighting \
+ blockf \
+    zsh-users/zsh-completions \
+ atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
