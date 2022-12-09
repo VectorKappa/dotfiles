@@ -6,7 +6,7 @@
     "hotkey-show-app": "<Alt>Space",
     "render-on-screen": "mouse-pointer-monitor",
     "show-indicator-icon": true,
-    "show-recent-apps": "5",
+    "show-recent-apps": "7",
     "terminal-command": "",
-    "theme-name": "nord"
+    "theme-name": "catppuccin-macchiato-round"
 }

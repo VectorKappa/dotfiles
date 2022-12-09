@@ -83,13 +83,6 @@
         "last_commit": "4c6af50d1c9a24d5aad2c597634ff0c634972a5c",
         "last_commit_time": "2021-08-08T19:19:59"
     },
-    "com.github.brpaz.ulauncher-file-search": {
-        "id": "com.github.brpaz.ulauncher-file-search",
-        "url": "https://github.com/brpaz/ulauncher-file-search",
-        "updated_at": "2021-10-23T23:04:41.961270",
-        "last_commit": "0ea61c2049b27f1ddfa81d1844876f21dd9d6e7b",
-        "last_commit_time": "2020-07-03T13:30:16"
-    },
     "com.github.isacikgoz.ukill": {
         "id": "com.github.isacikgoz.ukill",
         "url": "https://github.com/isacikgoz/ukill",
@@ -117,13 +110,6 @@
         "updated_at": "2021-10-29T15:04:02.871004",
         "last_commit": "fd0745d43e79e945c1f531c4654131a8c0fe72d7",
         "last_commit_time": "2021-03-14T09:46:56"
-    },
-    "com.github.brpaz.ulauncher-trello": {
-        "id": "com.github.brpaz.ulauncher-trello",
-        "url": "https://github.com/brpaz/ulauncher-trello",
-        "updated_at": "2021-10-29T15:04:53.998727",
-        "last_commit": "11efe336e5e34d5866ede5c2df9e23e6419e0206",
-        "last_commit_time": "2021-05-03T21:01:46"
     },
     "com.github.brpaz.ulauncher-statuspages": {
         "id": "com.github.brpaz.ulauncher-statuspages",
@@ -195,11 +181,81 @@
         "last_commit": "7478980b8fd6d9da3454dd0fb9ec232d7457a3c6",
         "last_commit_time": "2021-05-01T06:18:09"
     },
-    "com.github.brpaz.ulauncher-dendron": {
-        "id": "com.github.brpaz.ulauncher-dendron",
-        "url": "https://github.com/brpaz/ulauncher-dendron",
-        "updated_at": "2021-10-29T20:05:04.895325",
-        "last_commit": "74dff09e1d267abc57039246d86cc2e00d081a31",
-        "last_commit_time": "2021-07-10T16:58:24"
+    "com.github.dynobo.ulauncher-list-keywords": {
+        "id": "com.github.dynobo.ulauncher-list-keywords",
+        "url": "https://github.com/dynobo/ulauncher-list-keywords",
+        "updated_at": "2022-12-09T09:27:23.907081",
+        "last_commit": "1cbb4380576335c83373a940a27874b7f6a873ea",
+        "last_commit_time": "2022-11-12T01:27:29"
+    },
+    "com.github.rapha149.ulauncher-bluetooth": {
+        "id": "com.github.rapha149.ulauncher-bluetooth",
+        "url": "https://github.com/Rapha149/ulauncher-bluetooth",
+        "updated_at": "2022-12-09T09:34:33.461934",
+        "last_commit": "aa84798f539c9cb312cf3be01415a58901ace8d6",
+        "last_commit_time": "2022-04-27T10:56:00"
+    },
+    "com.github.ajboni.ulauncher-pipewire-runtime-settings": {
+        "id": "com.github.ajboni.ulauncher-pipewire-runtime-settings",
+        "url": "https://github.com/ajboni/ulauncher-pipewire-runtime-settings",
+        "updated_at": "2022-12-09T09:35:49.354949",
+        "last_commit": "faf9a4875705fe0eda71b6daa1b0cc69bfd44cd6",
+        "last_commit_time": "2022-10-12T22:23:56"
+    },
+    "com.github.hillaryychan.ulauncher-fzf": {
+        "id": "com.github.hillaryychan.ulauncher-fzf",
+        "url": "https://github.com/hillaryychan/ulauncher-fzf",
+        "updated_at": "2022-12-09T09:36:18.325051",
+        "last_commit": "fc0d3ba350795980d51d6afc855c122522335e11",
+        "last_commit_time": "2022-08-31T11:24:40"
+    },
+    "com.github.melianmiko.ulauncher-nmcli": {
+        "id": "com.github.melianmiko.ulauncher-nmcli",
+        "url": "https://github.com/melianmiko/ulauncher-nmcli",
+        "updated_at": "2022-12-09T09:36:37.604117",
+        "last_commit": "fe967c947748616df602c9d022fec6d68a6b2cf2",
+        "last_commit_time": "2022-05-01T12:20:38"
+    },
+    "com.github.ygun.ulauncher-nm": {
+        "id": "com.github.ygun.ulauncher-nm",
+        "url": "https://github.com/ygun/ulauncher-nm",
+        "updated_at": "2022-12-09T09:38:33.319391",
+        "last_commit": "036a0b3b24fb325f7aa648872c916d04966e7101",
+        "last_commit_time": "2021-02-03T13:17:59"
+    },
+    "com.github.dflock.ulauncher-window-switcher": {
+        "id": "com.github.dflock.ulauncher-window-switcher",
+        "url": "https://github.com/dflock/ulauncher-window-switcher",
+        "updated_at": "2022-12-09T09:39:06.083407",
+        "last_commit": "54622e353a7d2d0421250a76cab4aafa9ca720c5",
+        "last_commit_time": "2022-01-16T17:56:00"
+    },
+    "com.github.mikebarkmin.ulauncher-obsidian": {
+        "id": "com.github.mikebarkmin.ulauncher-obsidian",
+        "url": "https://github.com/mikebarkmin/ulauncher-obsidian",
+        "updated_at": "2022-12-09T09:39:56.514721",
+        "last_commit": "1da31425580691328745826376434b3cff69ffcf",
+        "last_commit_time": "2022-06-03T10:38:34"
+    },
+    "com.github.ceroprogramming.ulauncher-pulsecontrol": {
+        "id": "com.github.ceroprogramming.ulauncher-pulsecontrol",
+        "url": "https://github.com/CeroProgramming/ulauncher-pulsecontrol",
+        "updated_at": "2022-12-09T09:43:35.580035",
+        "last_commit": "3e1c891b8b3c8f5cb50ea927853efd198ac84a1b",
+        "last_commit_time": "2022-11-23T12:43:29"
+    },
+    "com.github.brpaz.ulauncher-shortcuts": {
+        "id": "com.github.brpaz.ulauncher-shortcuts",
+        "url": "https://github.com/brpaz/ulauncher-shortcuts",
+        "updated_at": "2022-12-09T09:43:49.957013",
+        "last_commit": "8f226b0cbe744221ce441cd09853b0abe06e78fd",
+        "last_commit_time": "2022-02-05T15:11:07"
+    },
+    "com.github.sebw.ulauncher-jrnl": {
+        "id": "com.github.sebw.ulauncher-jrnl",
+        "url": "https://github.com/sebw/ulauncher-jrnl",
+        "updated_at": "2022-12-09T09:44:07.724354",
+        "last_commit": "2490cfd0ed93e412b5981df2bef7cdedf7ba86cf",
+        "last_commit_time": "2021-07-10T14:47:57"
     }
 }
