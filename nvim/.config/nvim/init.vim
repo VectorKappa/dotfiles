@@ -80,7 +80,7 @@ Plug 'christoomey/vim-system-copy'
 
 
 Plug 'neovim/nvim-lspconfig'
-
+Plug 'ranjithshegde/ccls.nvim'
 " Initialize plugin system
 call plug#end()
 
@@ -182,6 +182,7 @@ local lsp_flags = {
 --lsp.<server>.setup(coq.lsp_ensure_capabilities(<stuff...>)) -- after
 
 lsp.pyright.setup(coq.lsp_ensure_capabilities({}))
+lsp.ccls.setup(coq.lsp_ensure_capabilities({}))
 lsp.rust_analyzer.setup(coq.lsp_ensure_capabilities({
     settings = {
         ["rust-analyzer"] = {
