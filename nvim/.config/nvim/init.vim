@@ -77,7 +77,7 @@ Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 
 Plug 'christoomey/vim-system-copy'
-
+Plug 'eandrju/cellular-automaton.nvim'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'ranjithshegde/ccls.nvim'
