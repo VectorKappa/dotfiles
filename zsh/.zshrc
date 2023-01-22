@@ -182,8 +182,9 @@ zinit ice wait lucid
 zinit load 'wfxr/forgit'
 
 # Vi mode :)
-zinit ice depth=1
-zinit light jeffreytse/zsh-vi-mode
+#zinit ice depth=1
+#zinit light jeffreytse/zsh-vi-mode
+
 #zplug "plugins/virtualenv",	from:oh-my-zsh
 #zplug "plugins/pip",			from:oh-my-zsh
 #zplug "plugins/nmap",			from:oh-my-zsh
@@ -222,7 +223,8 @@ zinit wait lucid for \
  atload"!_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+zinit pack"binary" for fzf
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize

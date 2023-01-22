@@ -91,3 +91,4 @@ alias runhis="anyframe-widget-execute-history"
 
 # Default xclip to use Ctrl-c/Ctrl-v clipboard
 alias xclip="xclip -selection c"
+alias :q="exit"
