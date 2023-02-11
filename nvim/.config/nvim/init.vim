@@ -78,7 +78,7 @@ Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 
 Plug 'christoomey/vim-system-copy'
 Plug 'eandrju/cellular-automaton.nvim'
-
+Plug 'williamboman/mason.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ranjithshegde/ccls.nvim'
 " Initialize plugin system
