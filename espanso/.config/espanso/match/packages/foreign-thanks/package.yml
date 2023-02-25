@@ -1,136 +1,141 @@
-# Foreign Thanks
 matches:
-  - trigger: ':arabicthx'
-    replace: 'شكرا'
-  - trigger: ':arabicthanks'
-    replace: 'شكرا'
-
-  - trigger: ':armenianthx'
-    replace: 'Շնորհակալություն'
-  - trigger: ':armenianthanks'
-    replace: 'Շնորհակալություն'
-
-  - trigger: ':basquethx'
-    replace: 'Eskerrik asko'
-  - trigger: ':basquethanks'
-    replace: 'Eskerrik asko'
-
-  - trigger: ':canadianthx'
-    replace: 'thanks, eh.'
-  - trigger: ':canadianthanks'
-    replace: 'thanks, eh.'
-
-  - trigger: ':chinesethx'
-    replace: '谢谢'
-  - trigger: ':chinesethanks'
-    replace: '谢谢'
-
-  - trigger: ':czechthx'
-    replace: 'Díky'
-  - trigger: ':czechthanks'
-    replace: 'Díky'
-
-  - trigger: ':dutchthx'
-    replace: 'Dank je wel'
-  - trigger: ':dutchthanks'
-    replace: 'Dank je wel'
-
-  - trigger: ':filipinothx'
-    replace: 'Salamat'
-  - trigger: ':filipinothanks'
-    replace: 'Salamat'
-
-  - trigger: ':finnishthx'
-    replace: 'Kiitos'
-  - trigger: ':finnishthanks'
-    replace: 'Kiitos'
-
-  - trigger: ':frenchthx'
-    replace: 'Merci'
-  - trigger: ':frenchthanks'
-    replace: 'Merci'
-
-  - trigger: ':germanthx'
-    replace: 'Danke'
-  - trigger: ':germanthanks'
-    replace: 'Danke'
-
-  - trigger: ':icelandicthx'
-    replace: 'Takk'
-  - trigger: ':icelandicthanks'
-    replace: 'Takk'
-
-  - trigger: ':indianthx'
-    replace: 'धन्यवाद'
-  - trigger: ':indianthanks'
-    replace: 'धन्यवाद'
-
-  - trigger: ':indonesianthx'
-    replace: 'Terima kasih'
-  - trigger: ':indonesianthanks'
-    replace: 'Terima kasih'
-
-  - trigger: ':italianthx'
-    replace: 'Grazie'
-  - trigger: ':italianthanks'
-    replace: 'Grazie'
-
-  - trigger: ':japanesethx'
-    replace: 'ありがとうございます'
-  - trigger: ':japanesethanks'
-    replace: 'ありがとうございます'
-
-  - trigger: ':klingonthx'
-    replace: "QA TLHO'"
-  - trigger: ':klingonthanks'
-    replace: "QA TLHO'"
-
-  - trigger: ':koreanthx'
-    replace: '감사합니다'
-  - trigger: ':koreanthanks'
-    replace: '감사합니다'
-
-  - trigger: ':persianthx'
-    replace: 'متشکرم'
-  - trigger: ':persianthanks'
-    replace: 'متشکرم'
-
-  - trigger: ':polishthx'
-    replace: 'Dzięki'
-  - trigger: ':polishthanks'
-    replace: 'Dzięki'
-
-  - trigger: ':romanianthx'
-    replace: 'Multumesc'
-  - trigger: ':romanianthanks'
-    replace: 'Multumesc'
-
-  - trigger: ':russianthx'
-    replace: 'Cпасибо'
-  - trigger: ':russianthanks'
-    replace: 'Cпасибо'
-
-  - trigger: ':spanishthx'
-    replace: 'Gracias'
-  - trigger: ':spanishthanks'
-    replace: 'Gracias'
-
-  - trigger: ':swedishthx'
-    replace: 'Tack'
-  - trigger: ':swedishthanks'
-    replace: 'Tack'
-
-  - trigger: ':turkishthx'
-    replace: 'Sağol'
-  - trigger: ':turkishthanks'
-    replace: 'Sağol'
-
-  - trigger: ':ukrainianthx'
-    replace: 'Дякую'
-  - trigger: ':ukrainianthanks'
-    replace: 'Дякую'
-
-  - trigger: ':vietnamesethx'
-    replace: 'Cảm ơn'
-  - trigger: ':vietnamesethanks'
-    replace: 'Cảm ơn'
+  - replace: شكرا
+    triggers:
+      - ':arthx'
+      - ':arabicthx'
+      - ':arabicthanks'
+  - replace: Շնորհակալություն
+    triggers:
+      - ':hythx'
+      - ':armenianthx'
+      - ':armenianthanks'
+  - replace: Eskerrik asko
+    triggers:
+      - ':euthx'
+      - ':basquethx'
+      - ':basquethanks'
+  - replace: Дзякуй
+    triggers:
+      - ':bethx'
+      - ':belarusianthx'
+      - ':belarusianthanks'
+  - replace: 谢谢
+    triggers:
+      - ':zhthx'
+      - ':chinesethx'
+      - ':chinesethanks'
+  - replace: Díky
+    triggers:
+      - ':csthx'
+      - ':czechthx'
+      - ':czechthanks'
+  - replace: Dank je wel
+    triggers:
+      - ':nlthx'
+      - ':dutchthx'
+      - ':dutchthanks'
+  - replace: Salamat
+    triggers:
+      - ':tlthx'
+      - ':filipinothx'
+      - ':filipinothanks'
+  - replace: Kiitos
+    triggers:
+      - ':fithx'
+      - ':finnishthx'
+      - ':finnishthanks'
+  - replace: Merci
+    triggers:
+      - ':frthx'
+      - ':frenchthx'
+      - ':frenchthanks'
+  - replace: Danke
+    triggers:
+      - ':dethx'
+      - ':germanthx'
+      - ':germanthanks'
+  - replace: धन्यवाद
+    triggers:
+      - ':hithx'
+      - ':hindithx'
+      - ':hindithanks'
+  - replace: Takk
+    triggers:
+      - ':isthx'
+      - ':icelandicthx'
+      - ':icelandicthanks'
+  - replace: Terima kasih
+    triggers:
+      - ':idthx'
+      - ':indonesianthx'
+      - ':indonesianthanks'
+  - replace: Grazie
+    triggers:
+      - ':itthx'
+      - ':italianthx'
+      - ':italianthanks'
+  - replace: ありがとうございます
+    triggers:
+      - ':jathx'
+      - ':japanesethx'
+      - ':japanesethanks'
+  - replace: Qa tlho'
+    triggers:
+      - ':tlhthx'
+      - ':klingonthx'
+      - ':klingonthanks'
+  - replace: 감사합니다
+    triggers:
+      - ':kothx'
+      - ':koreanthx'
+      - ':koreanthanks'
+  - replace: ډیره مننه
+    triggers:
+      - ':psthx'
+      - ':pashtothx'
+      - ':pashtothanks'
+  - replace: متشکرم
+    triggers:
+      - ':fathx'
+      - ':persianthx'
+      - ':persianthanks'
+  - replace: Dzięki
+    triggers:
+      - ':plthx'
+      - ':polishthx'
+      - ':polishthanks'
+  - replace: Multumesc
+    triggers:
+      - ':rothx'
+      - ':romanianthx'
+      - ':romanianthanks'
+  - replace: Gracias
+    triggers:
+      - ':esthx'
+      - ':spanishthx'
+      - ':spanishthanks'
+  - replace: Tack
+    triggers:
+      - ':svthx'
+      - ':swedishthx'
+      - ':swedishthanks'
+  - replace: Sağol
+    triggers:
+      - ':trthx'
+      - ':turkishthx'
+      - ':turkishthanks'
+  - replace: Дякую
+    triggers:
+      - ':ukthx'
+      - ':ukrainianthx'
+      - ':ukrainianthanks'
+  - replace: شکریہ
+    triggers:
+      - ':urthx'
+      - ':urduthx'
+      - ':urduthanks'
+  - replace: Cảm ơn
+    triggers:
+      - ':vithx'
+      - ':vietnamesethx'
+      - ':vietnamesethanks'
