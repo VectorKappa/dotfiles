@@ -171,6 +171,9 @@ zinit ice wait lucid
 zinit light MichaelAquilina/zsh-you-should-use
 
 zinit ice wait lucid
+zinit light MichaelAquilina/zsh-autoswitch-virtualenv
+
+zinit ice wait lucid
 zinit light laggardkernel/zsh-thefuck
 
 # zsh-autosuggestions
@@ -186,21 +189,14 @@ zinit load 'wfxr/forgit'
 #zinit light jeffreytse/zsh-vi-mode
 
 #zplug "plugins/virtualenv",	from:oh-my-zsh
-#zplug "plugins/pip",			from:oh-my-zsh
-#zplug "plugins/nmap",			from:oh-my-zsh
-#zplug "plugins/ipfs",			from:oh-my-zsh
 ##zplug "plugins/gpg-agent",		from:oh-my-zsh
-#zplug "plugins/rsync",			from:oh-my-zsh
-#zplug "plugins/rust",			from:oh-my-zsh
 #zplug "plugins/git",                    from:oh-my-zsh
-#zplug "plugins/colored-man-pages",      from:oh-my-zsh
 #zplug "plugins/command-not-found",      from:oh-my-zsh
 ##zplug "plugins/tmux",                   from:oh-my-zsh
 #zplug "plugins/urltools",               from:oh-my-zsh
 ##zplug "plugins/thefuck",                from:oh-my-zsh		#Used interchangably with
 ##setopt correct							#<-This option
 ## Load completion library for those sweet [tab] squares
-#zplug "lib/completion",                 from:oh-my-zsh
 ##zplug "mollifier/anyframe",             from:github
 ## Misc. visual tweaks
 ## zplug "modules/prompt",			from:prezto
@@ -211,8 +207,18 @@ zinit load 'wfxr/forgit'
 ## Syntax highlighting for commands, load last
 #zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:3
 #zplug "Aloxaf/gencomp", defer:3
-
-zinit snippet ~/.zsh_compl/zoxide
+zinit snippet OMZP::pip
+#zinit snippet OMZP::adb
+zinit snippet OMZP::aliases
+zinit snippet OMZP::encode64
+#zinit snippet OMZP::fd
+#zinit snippet OMZP::ripgrep
+zinit snippet OMZP::nmap
+#zinit snippet OMZP::ipfs
+zinit snippet OMZP::rsync
+zinit snippet OMZP::colored-man-pages
+zinit snippet OMZP::rust
+zinit snippet OMZP::zoxide
 zinit snippet OMZL::completion.zsh
 
 zinit wait lucid for \
@@ -225,6 +231,25 @@ zinit wait lucid for \
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 zinit pack"binary" for fzf
+
+
+# GPG-SSH INTEGRATION
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
+
+
+
+
+
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize
+
+
