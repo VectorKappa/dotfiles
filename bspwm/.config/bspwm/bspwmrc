@@ -98,10 +98,10 @@ bspc rule -a Variety state=floating rectangle=1600x120+0+440
 ##  windows on the desktop. Using it disables negative window gap.
 autogap &
 
-##  This script balances all windows when new one is spawned 
+##  This script balances all windows when new one is spawned
 #euclid_balancer &
 
-##Edge-switcher switches to next workspace when moves moves to the 
+##Edge-switcher switches to next workspace when moves moves to the
 ##edge of the monitor (behavior similar to enlightenment)
 #edge-switcher &
 
