@@ -69,6 +69,9 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kosayoda/nvim-lightbulb'
 Plug 'antoinemadec/FixCursorHold.nvim'
 
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
+Plug 'norcalli/nvim-colorizer.lua'
 
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
@@ -209,7 +212,7 @@ EOF
 let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
 
 lua require("catppuccin").setup()
-
+lua require('colorizer').setup()
 colorscheme catppuccin
 
 autocmd VimEnter * execute 'COQnow -s'
