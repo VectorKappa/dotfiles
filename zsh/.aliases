@@ -92,3 +92,4 @@ alias runhis="anyframe-widget-execute-history"
 # Default xclip to use Ctrl-c/Ctrl-v clipboard
 alias xclip="xclip -selection c"
 alias :q="exit"
+alias mirrorup='sudo reflector --verbose -c Poland -c Germany -c France -l 10 -a 2 -p https --sort rate --save /etc/pacman.d/mirrorlist'

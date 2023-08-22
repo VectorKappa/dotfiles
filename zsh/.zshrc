@@ -167,6 +167,10 @@ zinit light romkatv/powerlevel10k
 #zi ice tag1"<option1>" tag2"<option2>"
 #zi load <repo/plugin>
 
+
+zinit light zdharma-continuum/zinit-annex-patch-dl
+
+
 zinit ice wait lucid
 zinit light MichaelAquilina/zsh-you-should-use
 
