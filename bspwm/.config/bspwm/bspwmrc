@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/dash
 gap=7
 PANEL_HEIGHT=27
 DOCK_WIDTH=24
@@ -98,10 +98,10 @@ bspc rule -a Variety state=floating rectangle=1600x120+0+440
 ##  windows on the desktop. Using it disables negative window gap.
 autogap &
 
-##  This script balances all windows when new one is spawned 
+##  This script balances all windows when new one is spawned
 #euclid_balancer &
 
-##Edge-switcher switches to next workspace when moves moves to the 
+##Edge-switcher switches to next workspace when moves moves to the
 ##edge of the monitor (behavior similar to enlightenment)
 #edge-switcher &
 
@@ -115,8 +115,8 @@ autogap &
 #Keybindings daemon
 sxhkd &
 
-wmname LG3D;
-export _JAVA_AWT_WM_NONREPARENTING=1;
+#wmname LG3D;
+#export _JAVA_AWT_WM_NONREPARENTING=1;
 
 #Source autostartfile. Uncomment this if you use bspwm-git
 . $HOME/.config/bspwm/autostart > /tmp/bspwm-autostart.log 2>&1
