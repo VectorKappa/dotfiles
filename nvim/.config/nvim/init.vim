@@ -19,7 +19,7 @@ Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
 """""HTML"""""
 Plug 'mattn/emmet-vim'
-
+Plug 'elkowar/yuck.vim'
 Plug 'junegunn/vim-github-dashboard'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -30,7 +30,7 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'junegunn/vim-easy-align'
 
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 """""CLUTTER-FREE EDITING"""""
 Plug 'junegunn/goyo.vim'
@@ -78,6 +78,9 @@ Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 " 9000+ Snippets
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+
+
+Plug 'uga-rosa/translate.nvim'
 
 Plug 'christoomey/vim-system-copy'
 Plug 'eandrju/cellular-automaton.nvim'
