@@ -59,7 +59,7 @@ jgmenu --at-pointer --hide-on-startup &
 #(tint2; sleep 10; xdo raise -n tint2) &
 
 ## launch tray
-stalonetray -v -t --geometry=1x48+0+35 &
+stalonetray -v --geometry=1x48+0+35 &
 
 ## Screenshot daemon
 flameshot &

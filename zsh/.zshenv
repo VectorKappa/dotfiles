@@ -1,5 +1,5 @@
 # Path shenanigans
-export PATH="$PATH:~/.cargo/bin:~/.local/bin";
+export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin";
 
 
 
