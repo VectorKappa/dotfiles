@@ -275,7 +275,7 @@ super + ctrl + button4
 
 # run applications
 super + space
-	rofi -modi drun,run,window,calc -show drun
+	rofi -modi drun,run,window,calc,emoji -show drun
 	#dmenu_recent -fn 'xos4 Terminus:size=15' -i -l 14 -w 600 -y $PANEL_HEIGHT
 
 # Triggered by jus tapping super
@@ -293,7 +293,7 @@ super + shift + z
 	open-terminal-here
 
 super + r
-	rofi -modi drun,run,window,calc -show run
+	rofi -modi drun,run,window,calc,emoji -show run
 
 super + shift + b
 	$BROWSER
@@ -355,7 +355,8 @@ XF86AudioMicMute
 	amixer set Capture toggle
 
 XF86Launch1
-	rofi -modi drun,run,window,calc,windowcd,combi,keys,filebrowser,emoji -show drun
+	#rofi -modi drun,run,window,calc,windowcd,combi,keys,filebrowser,emoji -show drun
+	rofi-rbw
 
 ctrl + shift + Escape
 	alacritty -e btop
