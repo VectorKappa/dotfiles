@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/bin/dash
 
-if [ "$(pgrep -cx euclid_balancer)" -gt 1 ] ; then 
+if [ "$(pgrep -cx euclid_balancer)" -gt 1 ] ; then
 	killall euclid_balancer && exit 0
 else
 

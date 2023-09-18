@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/dash
 i=1
 case $1 in
 dsktp) # Add or remove a desktop

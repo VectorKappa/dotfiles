@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/dash
 file="/tmp/.minimized"
 touch $file
 # By https://github.com/tatou-tatou
@@ -45,14 +45,14 @@ dmenu)
     # Comment that line if you use vanilla dmenu.
     yPos=$((410-$linesDisplayed*10))
 
-    
+
     # Uncomment only one line with dmenu_cmd
     # If you use rofi
     dmenu_cmd="rofi -lines $linesDisplayed -dmenu -p Hidden:"
-    
+
     # If you use dmenu, patched with eye candy
     # dmenu_cmd="dmenu -l 9 -x $left_shift -y $top_shift -w $bar_width -fn sans-11 -nb #201F1D -nf #eddec9 -sb #8F3724 -sf #EDDEC9 -p Hidden:"
-        
+
     # If you use vanilla dmenu
     # dmenu_cmd="dmenu -b -i -l $linesDisplayed -p Hidden:"
 
