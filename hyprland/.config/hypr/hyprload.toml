@@ -1,0 +1,6 @@
+plugins = [
+    # Installs the plugin from https://github.com/Duckonaut/split-monitor-workspaces
+     "Duckonaut/split-monitor-workspaces",
+		 "VortexCoyote/hyprfocus",
+
+]
