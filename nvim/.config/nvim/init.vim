@@ -23,7 +23,7 @@ Plug 'elkowar/yuck.vim'
 Plug 'junegunn/vim-github-dashboard'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'ActivityWatch/aw-watcher-vim'
+"Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'vim-scripts/indentLine.vim'
 Plug 'rhysd/git-messenger.vim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
