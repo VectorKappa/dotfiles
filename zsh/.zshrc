@@ -106,51 +106,6 @@ fi
 PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
 
 
-case "${TERM}" in
-    cons25*|linux) # plain BSD/Linux console
-        bindkey '\e[H'    beginning-of-line   # home
-        bindkey '\e[F'    end-of-line         # end
-        bindkey '\e[5~'   delete-char         # delete
-        bindkey '[D'      emacs-backward-word # esc left
-        bindkey '[C'      emacs-forward-word  # esc right
-        ;;
-    *rxvt*) # rxvt derivatives
-        bindkey '\eOc'    forward-word        # ctrl right
-        bindkey '\eOd'    backward-word       # ctrl left
-        bindkey '\e\e[D'  backward-word     ### Alt left
-        bindkey '\e\e[C'  forward-word      ### Alt right
-        # workaround for screen + urxvt
-        bindkey '\e[7~'   beginning-of-line   # home
-        bindkey '\e[8~'   end-of-line         # end
-        bindkey '^[[1~'   beginning-of-line   # home
-        bindkey '^[[4~'   end-of-line         # end
-        ;;
-    *xterm*) # xterm derivatives
-        bindkey '\e[H'    beginning-of-line   # home
-        bindkey '\e[F'    end-of-line         # end
-        bindkey '\e[3~'   delete-char         # delete
-        bindkey '^[[C'    forward-word        # ctrl right
-        bindkey '^[[D'    backward-word       # ctrl left
-        bindkey '\eOC'    forward-word        # ctrl right
-        bindkey '\eOD'    backward-word       # ctrl left
-        bindkey '^[[1;3C' forward-word        # alt right
-        bindkey '^[[1;3D' backward-word       # alt left
-        # workaround for screen + xterm
-        bindkey '\e[1~'   beginning-of-line   # home
-        bindkey '\e[4~'   end-of-line         # end
-        ;;
-    screen)
-        bindkey '^[[1~'   beginning-of-line   # home
-        bindkey '^[[4~'   end-of-line         # end
-        bindkey '\e[3~'   delete-char         # delete
-        bindkey '\eOc'    forward-word        # ctrl right
-        bindkey '\eOd'    backward-word       # ctrl left
-        bindkey '^[[1;5C' forward-word        # ctrl right
-        bindkey '^[[1;5D' backward-word       # ctrl left
-        ;;
-esac
-
-
 setopt completealiases
 setopt interactivecomments
 
@@ -245,6 +200,13 @@ fi
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
+
+[ "$TERM" = "xterm-kitty" ] && (alias ssh="kitten ssh"; eval "kitten run-shell";)
+[ "$TERMUX_APK_RELEASE" = "F_DROID" ] && eval `okc-ssh-agent`
+
+
+
+preexec() { print -Pn "\e]0;$1\a" }
 
 
 
