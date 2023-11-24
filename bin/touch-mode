@@ -1,0 +1,12 @@
+#!/bin/zsh
+if [ -e /tmp/.touchmode.lock ]; then
+	# disable touchmode
+	hyprctl keyword monitor "eDP-1,1920x1080@60,0x0,1"
+	pkill nwg-dock-hyprl
+	rm /tmp/.touchmode.lock
+else
+	# enable touchmode
+	hyprctl keyword monitor "eDP-1,1920x1080@60,0x0,1.5"
+	nwg-dock-hyprland & disown;
+	touch /tmp/.touchmode.lock
+fi
