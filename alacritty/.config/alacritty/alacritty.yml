@@ -26,7 +26,7 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     family: Noto Color Emoji
-    family: SauceCodePro Nerd Font Mono
+    family: SauceCodePro NFM
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -108,9 +108,6 @@ bell:
   # Visual bell animation color.
   color: '#FF0000' #'#4C566A'
 
-  command:
-    program: aplay
-    args: ["/home/vectorkappa/Music/beeps/wav/erro.wav"]
 hints:
     # URL launcher
     #
@@ -134,7 +131,7 @@ hints:
          key: U
          mods: Control|Shift
   # launcher:
-  #    program: xdg-open 
+  #    program: xdg-open
       #args: []
 #key_bindings:
   #- { key: Paste,                                       action: Paste          }

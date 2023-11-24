@@ -1,8 +1,9 @@
 " -----------------
 "  GUI - Settings
 " -----------------
-set guifont=SauceCodePro\ Nerd\ Font\ Mono:12
+set guifont=SauceCodePro\ NFM:12
 set linespace=4
+set title
 
 set mouse=a
 let g:neovide_input_use_logo=v:false
