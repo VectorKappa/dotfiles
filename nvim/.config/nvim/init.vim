@@ -71,7 +71,7 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
-Plug 'norcalli/nvim-colorizer.lua'
+Plug 'NvChad/nvim-colorizer.lua'
 
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
@@ -79,6 +79,8 @@ Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'projekt0n/circles.nvim'
 
 Plug 'uga-rosa/translate.nvim'
 
@@ -134,9 +136,9 @@ nnoremap <F4> :Goyo<CR>
 nnoremap <F5> :MundoToggle<CR>
 
 ""Legacy" bindings for cut/copy/paste
-imap <C-X> "+x
-imap <C-C> "+y
-imap <C-V> "+gP
+"imap <C-X> "+x
+"imap <C-C> "+y
+"imap <C-V> "+gP
 
 
 
@@ -212,10 +214,11 @@ lsp.rust_analyzer.setup(coq.lsp_ensure_capabilities({
 
 EOF
 
-let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
+let g:catppuccin_flavour = "macchiato"
 
 lua require("catppuccin").setup()
 lua require('colorizer').setup()
+lua require("circles").setup()
 colorscheme catppuccin
 
 autocmd VimEnter * execute 'COQnow -s'
