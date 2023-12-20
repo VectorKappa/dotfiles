@@ -202,7 +202,7 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 
 
 [ "$TERM" = "xterm-kitty" ] && (alias ssh="kitten ssh"; eval "kitten run-shell";)
-[ "$TERMUX_APK_RELEASE" = "F_DROID" ] && eval `okc-ssh-agent`
+[ "$TERMUX_APK_RELEASE" = "F_DROID" ] && (eval `okc-ssh-agent`)
 
 
 
