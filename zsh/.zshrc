@@ -201,7 +201,7 @@ export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
 
-[ "$TERM" = "xterm-kitty" ] && (alias ssh="kitten ssh"; eval "kitten run-shell";)
+[ "$TERM" = "xterm-kitty" ] && (alias ssh="command kitten ssh";)
 [ "$TERMUX_APK_RELEASE" = "F_DROID" ] && (eval `okc-ssh-agent`)
 
 
@@ -217,5 +217,3 @@ preexec() { print -Pn "\e]0;$1\a" }
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize
-
-
