@@ -87,8 +87,11 @@ Plug 'uga-rosa/translate.nvim'
 Plug 'christoomey/vim-system-copy'
 Plug 'eandrju/cellular-automaton.nvim'
 Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ranjithshegde/ccls.nvim'
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
 " Initialize plugin system
 call plug#end()
 
@@ -134,15 +137,17 @@ nnoremap <F2> :CHADopen<CR>
 set pastetoggle=<F3>
 nnoremap <F4> :Goyo<CR>
 nnoremap <F5> :MundoToggle<CR>
-
+nnoremap <F6> :lua require("dapui").toggle()<CR>
 ""Legacy" bindings for cut/copy/paste
 "imap <C-X> "+x
 "imap <C-C> "+y
 "imap <C-V> "+gP
 
 
-
 lua << EOF
+require("mason").setup()
+require("mason-lspconfig").setup()
+
 local lsp = require "lspconfig"
 local coq = require "coq" -- add this
 
@@ -215,7 +220,7 @@ lsp.rust_analyzer.setup(coq.lsp_ensure_capabilities({
 EOF
 
 let g:catppuccin_flavour = "macchiato"
-
+lua require("dapui").setup()
 lua require("catppuccin").setup()
 lua require('colorizer').setup()
 lua require("circles").setup()
