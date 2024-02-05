@@ -2,7 +2,7 @@
 xhost + local: ;
 swww init;
 flameshot & disown;
-/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
-wayvnc & disown;
-touchegg & disown;
+wayvnc &
+dex -a &
+dunst &
 $HOME/.config/waybar/launcher.sh
