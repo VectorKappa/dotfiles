@@ -3,5 +3,7 @@ Lock,loginctl lock-session,system-lock-screen
 Exit,^checkout(exit),system-shutdown
 ^tag(exit)
 Suspend,systemctl -i suspend,system-log-out
+Hybrid Suspend,systemctl -i hybrid-sleep,system-suspend
 Reboot,systemctl -i reboot,system-reboot
+Hibernate,systemctl -i hibernate,system-hibernate
 Poweroff,systemctl -i poweroff,system-shutdown
