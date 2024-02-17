@@ -170,7 +170,8 @@
     },
     "custom/archicon": {
        "format":"󰣇",
-			 "on-click":"nwg-menu -d -fm nemo -cmd-lock gtklock -va top",
+			 // "on-click":"nwg-menu -d -fm nemo -cmd-lock gtklock -va top",
+			 "on-click":"jgmenu_run",
 			 "tooltip":false,
 		}
 
