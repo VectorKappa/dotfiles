@@ -179,6 +179,7 @@ zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::rust
 zinit snippet OMZP::zoxide
 zinit snippet OMZL::completion.zsh
+zinit snippet https://github.com/hyprwm/Hyprland/blob/main/hyprctl/hyprctl.zsh
 
 zinit wait lucid for \
  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
