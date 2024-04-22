@@ -1,7 +1,7 @@
 #!/bin/dash
 xhost + local: ;
 swww init;
-flameshot & disown;
+flameshot &
 wayvnc &
 dex -a &
 dunst &
