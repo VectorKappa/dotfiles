@@ -155,7 +155,7 @@
 
     #OTHER
     #Finds a filename in the git repository. Gives absolute location (from the git root).
-    find = !sh -c 'git ls-tree -r --name-only HEAD | grep --color $1' - 
+    find = !sh -c 'git ls-tree -r --name-only HEAD | grep --color $1' -
 
     #Deletes all branches that were safely merged into the master. All other are skipped (no worries).
     #on osx xargs does not have -r argument, so it fail. If you remove -r, it will run at least once, making this not safe operation
@@ -225,7 +225,7 @@
     sprzatajwszystkokurwa = !sh -c 'git clean -x' && git reset --hard
     wyjebzrobionekurwa = !sh -c 'git branch --merged' | grep -v "\\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d
     majonez = !sh -c 'branch="$(git rev-parse --abbrev-ref HEAD)" && git checkout master && git pull && git branch -d "$branch"'
-    
+
     dodajkurwa = add
     takkurwa = commit
     sciagajkurwa = pull
@@ -236,7 +236,7 @@
     pchajkurwayolo = push --force
     sorrykurwa = commit --amend -m
     spierdolwszystko = merge
-    
+
     cofnijwchuj = reset HEAD~100
     wypierdolwchuj = reset HEAD~100 --hard
     acomitamkurwa = push origin --force
@@ -250,7 +250,7 @@
 [user]
 	name = VectorKappa
 	email = piotrpatalong@gmail.com
-	signingkey = 0917E6568B3A9A02
+	signingkey = 32DCE8467E7FBD4F
 [mergetool]
 	keepBackup = true
 [init]
