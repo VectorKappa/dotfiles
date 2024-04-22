@@ -82,14 +82,16 @@ Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'projekt0n/circles.nvim'
 
-Plug 'uga-rosa/translate.nvim'
+Plug 'nvim-neotest/nvim-nio'
 
+Plug 'uga-rosa/translate.nvim'
+Plug 'mechatroner/rainbow_csv'
 Plug 'christoomey/vim-system-copy'
 Plug 'eandrju/cellular-automaton.nvim'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'ranjithshegde/ccls.nvim'
+"Plug 'ranjithshegde/ccls.nvim'
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 " Initialize plugin system
@@ -134,7 +136,7 @@ let g:syntastic_python_checkers = ['bandit', 'python']
 
 " Keybinds
 nnoremap <F2> :CHADopen<CR>
-set pastetoggle=<F3>
+nnoremap <F3> :lua vim.lsp.buf.code_action()<CR>
 nnoremap <F4> :Goyo<CR>
 nnoremap <F5> :MundoToggle<CR>
 nnoremap <F6> :lua require("dapui").toggle()<CR>
@@ -147,11 +149,31 @@ nnoremap <F6> :lua require("dapui").toggle()<CR>
 lua << EOF
 require("mason").setup()
 require("mason-lspconfig").setup()
-
+require("mason-lspconfig").setup_handlers({
+     function (server_name) -- default handler (optional)
+        require("lspconfig")[server_name].setup(require('coq').lsp_ensure_capabilities({}))
+     end})
 local lsp = require "lspconfig"
 local coq = require "coq" -- add this
+local dap = require("dap")
+dap.adapters.gdb = {
+  type = "executable",
+  command = "gdb",
+  args = { "-i", "dap" }
+}
 
-
+dap.configurations.cpp = {
+  {
+    name = "Launch",
+    type = "gdb",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    cwd = "${workspaceFolder}",
+    stopAtBeginningOfMainSubprogram = false,
+  },
+}
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -194,8 +216,9 @@ local lsp_flags = {
 --lsp.<server>.setup(<stuff...>)                              -- before
 --lsp.<server>.setup(coq.lsp_ensure_capabilities(<stuff...>)) -- after
 
-lsp.pyright.setup(coq.lsp_ensure_capabilities({}))
-lsp.ccls.setup(coq.lsp_ensure_capabilities({}))
+--lsp.pyright.setup(coq.lsp_ensure_capabilities({}))
+--lsp.ccls.setup(coq.lsp_ensure_capabilities({}))
+--lsp.ltex.setup(coq.lsp_ensure_capabilities({settings = {ltex = {language = "pl-PL"}}}))
 lsp.rust_analyzer.setup(coq.lsp_ensure_capabilities({
     settings = {
         ["rust-analyzer"] = {
