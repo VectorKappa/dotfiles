@@ -1,15 +1,2 @@
-ulauncher/.config/ulauncher/ext_preferences/com.github.brpaz.ulauncher-brotab.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.aksdb.ulauncher-gitmoji.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.brpaz.ulauncher-dendron.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.brpaz.ulauncher-statuspages.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.brpaz.ulauncher-trello.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.brpaz.ulauncher-timestamp.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.friday.ulauncher-hash2.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.kazumasan.ulauncher-sessions.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.mikebarkmin.ulauncher-duckduckgo.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.ncroxas.coingecko-query.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.msaistaken.ulauncher-translator.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.subutux.ulauncher-variety.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.noam09.ulauncher-remmina.db
-ulauncher/.config/ulauncher/ext_preferences/com.github.wsdfhjxc.ulauncher-qr-code.db
+ulauncher/.config/ulauncher/ext_preferences/**
 jgmenu/.config/jgmenu/backup/**
