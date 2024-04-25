@@ -287,10 +287,10 @@ super + shift + Return
 	urxvt
 
 super + z
-	alacritty
+	kitty
 
 super + shift + z
-	open-terminal-here
+	alacritty
 
 super + r
 	rofi -modi drun,run,window,calc,emoji -show run
